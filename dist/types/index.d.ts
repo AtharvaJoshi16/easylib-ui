@@ -1,1 +1,1 @@
-export { Button, ButtonProps } from "./atoms/Button/Button";
+export * from "./atoms";
