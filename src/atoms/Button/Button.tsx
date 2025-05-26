@@ -1,6 +1,7 @@
-export type ButtonProps = {
-  children?: React.ReactNode;
-};
+export interface ButtonProps {
+  children: React.ReactNode;
+}
+
 export const Button = ({ children }: ButtonProps) => {
-  return <button className="p-2 border border-red-100">{children}</button>;
+  return <button className="p-2 bg-red-500">{children}</button>;
 };
