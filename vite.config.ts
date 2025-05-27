@@ -54,7 +54,16 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
-      exclude: ["**/*.stories.ts", "**/*.stories.tsx"],
+      exclude: [
+        "**/*.stories.ts",
+        "**/*.stories.tsx",
+        "src/core/**/*.{ts,tsx}",
+      ],
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
 });
