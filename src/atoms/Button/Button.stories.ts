@@ -7,6 +7,24 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    variant: {
+      control: "select",
+      options: [
+        "default",
+        "secondary",
+        "dark",
+        "light",
+        "destructive",
+        "warning",
+        "success",
+        "gray",
+        "outline",
+        "ghost",
+        "link",
+      ],
+    },
+  },
   tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
 
@@ -17,5 +35,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     children: "Button",
+    variant: "dark",
   },
 };

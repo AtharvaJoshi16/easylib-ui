@@ -1,0 +1,62 @@
+{/* eslint-disable no-unused-vars */}
+import { Meta } from '@storybook/blocks';
+import React from 'react';
+
+<Meta title="Foundation/Colors" />
+
+# 🎨 Color Palette
+
+## Primary Colors
+
+<ColorRow
+  colors={[
+    "primary",
+    "secondary",
+    "success",
+    "destructive",
+    "warning",
+    "dark",
+    "light",
+    "gray",
+    "accent",
+    "muted",
+  ]}
+/>
+
+export const ColorRow = ({ colors }) => (
+  <div
+    style={{
+      display: "flex",
+      gap: "1rem",
+      flexWrap: "wrap",
+      marginBottom: "2rem",
+    }}
+  >
+    {colors.map((color) => (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          justifyContent: "center",
+          fontSize: "12px",
+          fontWeight: 600,
+          textAlign: "center",
+          color: "#000",
+        }}
+      >
+        <div
+          key={color}
+          className={`bg-${color}`}
+          style={{
+            width: "100px",
+            height: "50px",
+            borderRadius: "0.5rem",
+            border: "1px solid rgba(0, 0, 0, 0.1)",
+          }}
+        />
+        {color}
+      </div>
+    ))}
+  </div>
+);
