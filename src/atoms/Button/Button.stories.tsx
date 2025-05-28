@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { PlusCircle } from "lucide-react";
 import { Button } from "./Button";
 const meta = {
   title: "Components/Atoms/Button",
@@ -8,20 +9,24 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    disabled: {
+      control: "boolean",
+    },
     variant: {
       control: "select",
+      options: ["contained", "outlined", "text", "link"],
+    },
+    color: {
+      control: "select",
       options: [
-        "default",
+        "primary",
         "secondary",
-        "dark",
-        "light",
+        "success",
         "destructive",
         "warning",
-        "success",
         "gray",
-        "outline",
-        "ghost",
-        "link",
+        "dark",
+        "light",
       ],
     },
   },
@@ -35,6 +40,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     children: "Button",
-    variant: "dark",
+    startIcon: <PlusCircle />,
   },
 };

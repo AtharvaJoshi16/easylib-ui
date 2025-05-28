@@ -43,13 +43,13 @@ export default defineConfig({
         }
 
         // Exclude @core or any relative import that resolves to src/core
-        return (
-          id.startsWith("@core") ||
-          id.startsWith("@/core") ||
-          id.startsWith("./core") ||
-          id.includes("/src/core/") ||
-          id.includes("\\src\\core\\")
-        );
+        // return (
+        //   id.startsWith("@core") ||
+        //   id.startsWith("@/core") ||
+        //   id.startsWith("./core") ||
+        //   id.includes("/src/core/") ||
+        //   id.includes("\\src\\core\\")
+        // );
       },
       output: {
         entryFileNames: (chunk) => {
@@ -73,11 +73,7 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
-      exclude: [
-        "**/*.stories.ts",
-        "**/*.stories.tsx",
-        "src/core/**/*.{ts,tsx}",
-      ],
+      exclude: ["**/*.stories.ts", "**/*.stories.tsx"],
     }),
   ],
   resolve: {

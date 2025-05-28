@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ["class"],
+  darkMode: ["class", `[data-theme="dark"]`],
   content: [
     "./core/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
@@ -30,7 +30,7 @@ export default {
         },
         accent: {
           DEFAULT: "#93c5fd",
-          foreground: "#000",
+          foreground: "#1e3a8a",
         },
         destructive: {
           DEFAULT: "#ef4444",
@@ -56,9 +56,19 @@ export default {
           DEFAULT: "#16a34a",
           foreground: "#fff",
         },
-        border: "#71717a",
+        border: "#93c5fd",
         input: "var(--input)",
         ring: "var(--ring)",
+      },
+      padding: {
+        // Custom padding values
+        xs: "0.25rem", // 4px
+        sm: "0.5rem", // 8px
+        md: "1rem", // 16px
+        lg: "1.5rem", // 24px
+        xl: "2rem", // 32px
+        "2xl": "3rem", // 48px
+        section: "4.5rem", // 72px custom named spacing
       },
     },
   },

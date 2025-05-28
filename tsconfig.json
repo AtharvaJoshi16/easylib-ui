@@ -15,7 +15,8 @@
     "declaration": true,
     "jsx": "react-jsx",
     "typeRoots": ["./dist/index.d.ts"],
-
+    "rootDir": "src",
+    "outDir": "dist",
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -26,5 +27,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "theme.ts"]
 }
