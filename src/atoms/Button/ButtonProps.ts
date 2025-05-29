@@ -9,6 +9,7 @@ export interface ButtonProps extends CoreButtonProps {
   startIcon?: JSX.Element;
   endIcon?: JSX.Element;
   alignment?: "center" | "spaced";
+  loader?: JSX.Element;
 }
 
 export enum ButtonVariants {

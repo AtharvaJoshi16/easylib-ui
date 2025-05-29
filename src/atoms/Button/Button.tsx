@@ -10,6 +10,7 @@ export const Button = ({
   children,
   startIcon,
   endIcon,
+  loader,
   alignment = "center",
   ...props
 }: ButtonProps) => {
@@ -27,7 +28,7 @@ export const Button = ({
       )}
       disabled={props.disabled || loading}
     >
-      {loading && <Loader2 className="animate-spin" />}
+      {loading && (loader ?? <Loader2 className="animate-spin" />)}
       {!loading && startIcon}
       {children}
       {!loading && endIcon}

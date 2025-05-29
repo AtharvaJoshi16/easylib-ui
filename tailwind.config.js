@@ -57,7 +57,7 @@ export default {
           foreground: "#fff",
         },
         border: "#93c5fd",
-        input: "var(--input)",
+        input: "#d4d4d8",
         ring: "var(--ring)",
       },
       padding: {
