@@ -29,6 +29,10 @@
     "./Textfield": {
       "import": "./dist/atoms/Textfield/index.js",
       "types": "./dist/atoms/Textfield/index.d.ts"
+    },
+    "./Checkbox": {
+      "import": "./dist/atoms/Checkbox/index.js",
+      "types": "./dist/atoms/Checkbox/index.d.ts"
     }
   },
   "type": "module",
@@ -87,6 +91,7 @@
     "vitest": "^3.1.4"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.3.2",
     "@radix-ui/react-label": "^2.1.7"
   }
 }

@@ -4,3 +4,7 @@ export type { ButtonProps } from "./Button/ButtonProps";
 
 export { default as ELTextfield, Textfield } from "./Textfield/Textfield";
 export type { TextfieldProps } from "./Textfield/TextfieldProps";
+
+export { Checkbox, default as ELCheckbox } from "./Checkbox/Checkbox";
+export { CheckboxVariants } from "./Checkbox/CheckboxProps";
+export type { CheckboxProps } from "./Checkbox/CheckboxProps";

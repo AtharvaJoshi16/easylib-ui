@@ -10,17 +10,18 @@ export const Textfield = ({
   label,
   isError = false,
   helperText,
+  description,
   ...props
 }: TextfieldProps) => {
   return (
     <div className={clsx("flex flex-col gap-1", classes?.wrapper)}>
       {label && <Label {...label} className={clsx("pl-1", label?.className)} />}
-      <div className="relative">
+      <div className={clsx("relative", classes?.inputWrapper)}>
         <Input
           {...props}
           className={clsx(
             { "pl-10": startIcon },
-            { "border-red-500": isError },
+            { "border-destructive": isError },
             { "w-fit": ["date"].includes(props.type!) },
             props.className
           )}
@@ -46,9 +47,18 @@ export const Textfield = ({
           </span>
         )}
       </div>
-      <p className={clsx("text-slate-400 text-xs pl-1", classes?.helperText)}>
-        {helperText}
-      </p>
+      {description && !isError && (
+        <span className={clsx("text-xs pl-1 text-gray", classes?.description)}>
+          {description}
+        </span>
+      )}
+      {isError && (
+        <span
+          className={clsx("text-xs pl-1 text-destructive", classes?.helperText)}
+        >
+          {helperText}
+        </span>
+      )}
     </div>
   );
 };

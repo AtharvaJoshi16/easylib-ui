@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -54,6 +55,7 @@
     @apply border-border;
   }
   body {
+    font-family: "Work Sans", sans-serif;
     @apply bg-background text-foreground;
   }
 }
