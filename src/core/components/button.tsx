@@ -2,6 +2,7 @@ import { Slot } from "@radix-ui/react-slot";
 import * as React from "react";
 
 import { ButtonColors } from "@/atoms";
+import { ButtonSizes } from "@/atoms/Button/ButtonProps";
 import { cn } from "@/lib/utils";
 import { ButtonVariantProps, buttonVariants } from "../variants/button";
 
@@ -10,6 +11,7 @@ export interface ButtonProps
     ButtonVariantProps {
   asChild?: boolean;
   color?: ButtonColors;
+  size?: ButtonSizes;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -31,4 +33,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button };

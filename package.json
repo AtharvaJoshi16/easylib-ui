@@ -33,6 +33,10 @@
     "./Checkbox": {
       "import": "./dist/atoms/Checkbox/index.js",
       "types": "./dist/atoms/Checkbox/index.d.ts"
+    },
+    "./Textarea": {
+      "import": "./dist/atoms/Textarea/index.js",
+      "types": "./dist/atoms/Textarea/index.d.ts"
     }
   },
   "type": "module",
@@ -92,6 +96,7 @@
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.2",
-    "@radix-ui/react-label": "^2.1.7"
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-switch": "^1.2.5"
   }
 }

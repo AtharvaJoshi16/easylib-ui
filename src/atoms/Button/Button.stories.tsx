@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Story } from "@storybook/blocks";
 import { Loader, Star } from "lucide-react";
 import { Button } from "./Button";
-import { ButtonColors, ButtonVariants } from "./ButtonProps";
+import { ButtonColors, ButtonSizes, ButtonVariants } from "./ButtonProps";
 const meta = {
   title: "Components/Atoms/Button",
   component: Button,
@@ -188,16 +188,14 @@ export const Gallery: Story = {
           </Button>
         </div>
         <div className="flex items-center gap-4">
-          <Button variant={ButtonVariants.Contained} size="sm">
+          <Button variant={ButtonVariants.Contained} size={ButtonSizes.Small}>
             Small
           </Button>
-          <Button variant={ButtonVariants.Contained} size="default">
-            Default
-          </Button>
-          <Button variant={ButtonVariants.Contained} size="lg">
+          <Button variant={ButtonVariants.Contained}>Default</Button>
+          <Button variant={ButtonVariants.Contained} size={ButtonSizes.Large}>
             Large
           </Button>
-          <Button variant={ButtonVariants.Contained} size="icon">
+          <Button variant={ButtonVariants.Contained} size={ButtonSizes.Icon}>
             <Star />
           </Button>
         </div>

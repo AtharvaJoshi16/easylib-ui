@@ -15,7 +15,13 @@ export const Textfield = ({
 }: TextfieldProps) => {
   return (
     <div className={clsx("flex flex-col gap-1", classes?.wrapper)}>
-      {label && <Label {...label} className={clsx("pl-1", label?.className)} />}
+      {label && (
+        <Label
+          {...label}
+          htmlFor={props.id}
+          className={clsx("pl-1", label?.className)}
+        />
+      )}
       <div className={clsx("relative", classes?.inputWrapper)}>
         <Input
           {...props}
