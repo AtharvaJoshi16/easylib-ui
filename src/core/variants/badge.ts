@@ -146,7 +146,7 @@ export const badgeVariants = cva(
         variant: "mixed",
         color: "destructive",
         className:
-          "border-destructive text-destructive hover:bg-destructive/20 data-[selected=true]:bg-destructive data-[selected=true]:text-destructive-foreground",
+          "border-destructive text-destructive bg-destructive/20 hover:bg-destructive/30 data-[selected=true]:bg-destructive data-[selected=true]:text-destructive-foreground",
       },
       {
         variant: "mixed",
