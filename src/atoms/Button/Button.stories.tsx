@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { Colors } from "@/interfaces";
 import { Story } from "@storybook/blocks";
 import { Loader, Star } from "lucide-react";
 import { Button } from "./Button";
-import { ButtonColors, ButtonSizes, ButtonVariants } from "./ButtonProps";
+import { ButtonSizes, ButtonVariants } from "./ButtonProps";
 const meta = {
   title: "Components/Atoms/Button",
   component: Button,
@@ -63,127 +64,97 @@ export const Gallery: Story = {
       <div className="flex flex-col gap-5">
         <div className="flex items-center gap-4">
           <Button variant={ButtonVariants.Contained}>Button</Button>
-          <Button
-            variant={ButtonVariants.Contained}
-            color={ButtonColors.Secondary}
-          >
+          <Button variant={ButtonVariants.Contained} color={Colors.Secondary}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Contained}
-            color={ButtonColors.Destructive}
-          >
+          <Button variant={ButtonVariants.Contained} color={Colors.Destructive}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Contained}
-            color={ButtonColors.Success}
-          >
+          <Button variant={ButtonVariants.Contained} color={Colors.Success}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Contained} color={ButtonColors.Gray}>
+          <Button variant={ButtonVariants.Contained} color={Colors.Gray}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Contained}
-            color={ButtonColors.Warning}
-          >
+          <Button variant={ButtonVariants.Contained} color={Colors.Warning}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Contained} color={ButtonColors.Dark}>
+          <Button variant={ButtonVariants.Contained} color={Colors.Dark}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Contained} color={ButtonColors.Light}>
+          <Button variant={ButtonVariants.Contained} color={Colors.Light}>
             Button
           </Button>
         </div>
         <div className="flex items-center gap-4">
           <Button variant={ButtonVariants.Outlined}>Button</Button>
-          <Button
-            variant={ButtonVariants.Outlined}
-            color={ButtonColors.Secondary}
-          >
+          <Button variant={ButtonVariants.Outlined} color={Colors.Secondary}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Outlined}
-            color={ButtonColors.Destructive}
-          >
+          <Button variant={ButtonVariants.Outlined} color={Colors.Destructive}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Outlined}
-            color={ButtonColors.Success}
-          >
+          <Button variant={ButtonVariants.Outlined} color={Colors.Success}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Outlined} color={ButtonColors.Gray}>
+          <Button variant={ButtonVariants.Outlined} color={Colors.Gray}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Outlined}
-            color={ButtonColors.Warning}
-          >
+          <Button variant={ButtonVariants.Outlined} color={Colors.Warning}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Outlined} color={ButtonColors.Dark}>
+          <Button variant={ButtonVariants.Outlined} color={Colors.Dark}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Outlined} color={ButtonColors.Light}>
+          <Button variant={ButtonVariants.Outlined} color={Colors.Light}>
             Button
           </Button>
         </div>
         <div className="flex items-center gap-4">
           <Button variant={ButtonVariants.Text}>Button</Button>
-          <Button variant={ButtonVariants.Text} color={ButtonColors.Secondary}>
+          <Button variant={ButtonVariants.Text} color={Colors.Secondary}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Text}
-            color={ButtonColors.Destructive}
-          >
+          <Button variant={ButtonVariants.Text} color={Colors.Destructive}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Text} color={ButtonColors.Success}>
+          <Button variant={ButtonVariants.Text} color={Colors.Success}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Text} color={ButtonColors.Gray}>
+          <Button variant={ButtonVariants.Text} color={Colors.Gray}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Text} color={ButtonColors.Warning}>
+          <Button variant={ButtonVariants.Text} color={Colors.Warning}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Text} color={ButtonColors.Dark}>
+          <Button variant={ButtonVariants.Text} color={Colors.Dark}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Text} color={ButtonColors.Light}>
+          <Button variant={ButtonVariants.Text} color={Colors.Light}>
             Button
           </Button>
         </div>
         <div className="flex items-center gap-4">
           <Button variant={ButtonVariants.Link}>Button</Button>
-          <Button variant={ButtonVariants.Link} color={ButtonColors.Secondary}>
+          <Button variant={ButtonVariants.Link} color={Colors.Secondary}>
             Button
           </Button>
-          <Button
-            variant={ButtonVariants.Link}
-            color={ButtonColors.Destructive}
-          >
+          <Button variant={ButtonVariants.Link} color={Colors.Destructive}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Link} color={ButtonColors.Success}>
+          <Button variant={ButtonVariants.Link} color={Colors.Success}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Link} color={ButtonColors.Gray}>
+          <Button variant={ButtonVariants.Link} color={Colors.Gray}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Link} color={ButtonColors.Warning}>
+          <Button variant={ButtonVariants.Link} color={Colors.Warning}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Link} color={ButtonColors.Dark}>
+          <Button variant={ButtonVariants.Link} color={Colors.Dark}>
             Button
           </Button>
-          <Button variant={ButtonVariants.Link} color={ButtonColors.Light}>
+          <Button variant={ButtonVariants.Link} color={Colors.Light}>
             Button
           </Button>
         </div>

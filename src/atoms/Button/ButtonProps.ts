@@ -1,10 +1,11 @@
 import { ButtonProps as CoreButtonProps } from "@/core/components/button";
+import { Colors } from "@/interfaces";
 import React, { JSX } from "react";
 
 export interface ButtonProps extends CoreButtonProps {
   children: React.ReactNode;
   variant?: ButtonVariants;
-  color?: ButtonColors;
+  color?: Colors;
   loading?: boolean;
   startIcon?: JSX.Element;
   endIcon?: JSX.Element;

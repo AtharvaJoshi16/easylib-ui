@@ -5,16 +5,21 @@ import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
 
 const getComponentEntryPoints = () => {
-  const basePath = path.resolve(__dirname, "src/atoms");
-  const components = fs
-    .readdirSync(basePath)
-    .filter((folder) => fs.existsSync(path.join(basePath, folder, "index.ts")));
+  const folders = ["atoms", "molecules", "interfaces"];
 
   const entries: Record<string, string> = {};
-  components.forEach((comp) => {
-    entries[`atoms/${comp}`] = path.resolve(basePath, comp, "index.ts");
-  });
+  folders.forEach((folder) => {
+    const basePath = path.resolve(__dirname, `src/${folder}`);
+    const components = fs
+      .readdirSync(basePath)
+      .filter((folder) =>
+        fs.existsSync(path.join(basePath, folder, "index.ts"))
+      );
 
+    components.forEach((comp) => {
+      entries[`${folder}/${comp}`] = path.resolve(basePath, comp, "index.ts");
+    });
+  });
   return entries;
 };
 

@@ -1,11 +1,12 @@
 import { Button as CoreButton } from "@/core/components/button";
+import { Colors } from "@/interfaces";
 import clsx from "clsx";
 import { Loader2 } from "lucide-react";
-import { ButtonColors, ButtonProps, ButtonVariants } from "./ButtonProps";
+import { ButtonProps, ButtonVariants } from "./ButtonProps";
 
 export const Button = ({
   variant = ButtonVariants.Contained,
-  color = ButtonColors.Primary,
+  color = Colors.Primary,
   loading = false,
   children,
   startIcon,

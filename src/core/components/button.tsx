@@ -1,8 +1,8 @@
 import { Slot } from "@radix-ui/react-slot";
 import * as React from "react";
 
-import { ButtonColors } from "@/atoms";
 import { ButtonSizes } from "@/atoms/Button/ButtonProps";
+import { Colors } from "@/interfaces";
 import { cn } from "@/lib/utils";
 import { ButtonVariantProps, buttonVariants } from "../variants/button";
 
@@ -10,7 +10,7 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     ButtonVariantProps {
   asChild?: boolean;
-  color?: ButtonColors;
+  color?: Colors;
   size?: ButtonSizes;
 }
 

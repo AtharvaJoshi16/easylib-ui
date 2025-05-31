@@ -20,10 +20,12 @@ export default {
         primary: {
           DEFAULT: "#3b82f6",
           foreground: "#fff",
+          dark: "#2563eb",
         },
         secondary: {
           DEFAULT: "#6366f1",
           foreground: "#fff",
+          dark: "#4f46e5",
         },
         muted: {
           DEFAULT: "var(--muted)",
@@ -36,6 +38,7 @@ export default {
         destructive: {
           DEFAULT: "#ef4444",
           foreground: "#fff",
+          dark: "#dc2626",
         },
         dark: {
           DEFAULT: "#27272a",
@@ -48,14 +51,17 @@ export default {
         warning: {
           DEFAULT: "#eab308",
           foreground: "#713f12",
+          dark: "#ca8a04",
         },
         gray: {
           DEFAULT: "#6b7280",
           foreground: "#fff",
+          dark: "#52525b",
         },
         success: {
           DEFAULT: "#16a34a",
           foreground: "#fff",
+          dark: "#15803d",
         },
         border: "#93c5fd",
         input: "#d4d4d8",
