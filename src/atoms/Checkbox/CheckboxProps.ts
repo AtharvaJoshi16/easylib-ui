@@ -1,6 +1,6 @@
 import { CoreCheckboxProps } from "@/core/components/checkbox";
 import { Colors, Sizes } from "@/interfaces";
-import { LabelProps } from "@radix-ui/react-label";
+import { LabelProps } from "../Label/LabelProps";
 
 export interface CheckboxProps extends CoreCheckboxProps {
   classes?: {
@@ -14,11 +14,14 @@ export interface CheckboxProps extends CoreCheckboxProps {
   description?: React.ReactNode;
   helperText?: React.ReactNode;
   isError?: boolean;
-  order?: "rtl" | "ltr";
-  alignment?: "normal" | "spaced";
+  order?: Orders;
+  alignment?: Alignments;
   size?: Sizes;
   variant?: CheckboxVariants;
 }
+
+export type Orders = "rtl" | "ltr";
+export type Alignments = "normal" | "spaced";
 
 export enum CheckboxVariants {
   Contained = "contained",

@@ -1,6 +1,6 @@
 import { CoreSwitchProps } from "@/core/components/switch";
 import { Sizes } from "@/interfaces";
-import { LabelProps } from "@radix-ui/react-label";
+import { LabelProps } from "../Label/LabelProps";
 
 export interface SwitchProps extends CoreSwitchProps {
   classes?: {

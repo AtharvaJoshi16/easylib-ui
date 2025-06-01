@@ -1,5 +1,5 @@
 import { Textarea } from "@/core/components/textarea";
-import { LabelProps } from "@radix-ui/react-label";
+import { LabelProps } from "../Label/LabelProps";
 
 export interface TextAreaProps extends React.ComponentProps<typeof Textarea> {
   label?: LabelProps;

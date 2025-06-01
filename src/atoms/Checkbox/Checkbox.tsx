@@ -1,6 +1,8 @@
 import { Checkbox as CoreCheckbox } from "@/core/components/checkbox";
-import { Label } from "@/core/components/label";
+import { Description } from "@/helpers/Description";
+import { HelperText } from "@/helpers/HelperText";
 import clsx from "clsx";
+import Label from "../Label/Label";
 import { CheckboxProps } from "./CheckboxProps";
 
 export const Checkbox = ({
@@ -57,16 +59,13 @@ export const Checkbox = ({
         />
       </div>
       {description && !isError && (
-        <span className={clsx("text-xs pl-1 text-gray", classes?.description)}>
-          {description}
-        </span>
+        <Description
+          className={classes?.description}
+          description={description}
+        />
       )}
       {isError && (
-        <span
-          className={clsx("text-xs pl-1 text-destructive", classes?.helperText)}
-        >
-          {helperText}
-        </span>
+        <HelperText className={classes?.helperText} helperText={helperText} />
       )}
     </div>
   );

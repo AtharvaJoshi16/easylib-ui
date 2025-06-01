@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Trial: Story = {
   args: {
     label: {
-      children: "Comments",
+      label: "Comments",
     },
     description: "This is a demo description",
     placeholder: "Add comments here",
@@ -41,13 +41,13 @@ export const Gallery: Story = {
         <Textarea {...args} placeholder="Enter something" />
         <Textarea
           {...args}
-          label={{ id: "test", children: "Comments" }}
+          label={{ id: "test", label: "Comments" }}
           description="This is a demo description"
           placeholder="Add some comments"
         />
         <Textarea
           {...args}
-          label={{ id: "test", children: "Comments" }}
+          label={{ id: "test", label: "Comments" }}
           placeholder="Add some comments"
           description="This is a demo description"
           helperText={"This is demo helper text"}

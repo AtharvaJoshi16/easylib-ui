@@ -1,13 +1,19 @@
-export { Button, default as ELButton } from "./Button/Button";
-export { ButtonColors, ButtonVariants } from "./Button/ButtonProps";
-export type { ButtonProps } from "./Button/ButtonProps";
+export {
+  Button,
+  ButtonColors,
+  ButtonVariants,
+  default as ELButton,
+} from "./Button";
+export type { ButtonProps } from "./Button";
 
-export { default as ELTextfield, Textfield } from "./Textfield/Textfield";
-export type { TextfieldProps } from "./Textfield/TextfieldProps";
+export { default as ELTextfield, Textfield } from "./Textfield";
+export type { TextfieldProps } from "./Textfield";
 
-export { Checkbox, default as ELCheckbox } from "./Checkbox/Checkbox";
-export { CheckboxVariants } from "./Checkbox/CheckboxProps";
-export type { CheckboxProps } from "./Checkbox/CheckboxProps";
+export { Checkbox, CheckboxVariants, default as ELCheckbox } from "./Checkbox";
+export type { CheckboxProps } from "./Checkbox";
 
-export { default as ELTextArea, Textarea } from "./Textarea/Textarea";
-export type { TextAreaProps } from "./Textarea/TextareaProps";
+export { default as ELTextArea, Textarea } from "./Textarea";
+export type { TextAreaProps } from "./Textarea";
+
+export { default as ELLabel, Label } from "./Label";
+export type { LabelProps } from "./Label";

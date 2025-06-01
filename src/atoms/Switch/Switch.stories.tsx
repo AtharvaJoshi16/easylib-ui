@@ -51,7 +51,7 @@ type Story = StoryObj<typeof meta>;
 export const Trial: Story = {
   args: {
     label: {
-      children: "Demo Toggle Long Text",
+      label: "Demo Toggle Long Text",
     },
     description: "This is a demo description",
     helperText: "This is an error helper text",
@@ -62,7 +62,7 @@ export const Gallery: Story = {
   args: {
     checked: true,
     label: {
-      children: "",
+      label: "",
     },
   },
   render: (args) => {
@@ -88,7 +88,7 @@ export const Gallery: Story = {
           <Switch
             {...{
               label: {
-                children: "Demo Toggle Long Text",
+                label: "Demo Toggle Long Text",
               },
               description: "This is a demo description",
               helperText: "This is an error helper text",
@@ -99,7 +99,7 @@ export const Gallery: Story = {
           <Switch
             {...{
               label: {
-                children: "Demo Toggle Long Text",
+                label: "Demo Toggle Long Text",
               },
               disabled: true,
               description: "This is a demo description",
@@ -111,7 +111,7 @@ export const Gallery: Story = {
           <Switch
             {...{
               label: {
-                children: "Demo Toggle Long Text",
+                label: "Demo Toggle Long Text",
               },
               order: "rtl",
               description: "This is a demo description",
@@ -123,7 +123,7 @@ export const Gallery: Story = {
           <Switch
             {...{
               label: {
-                children: "Demo Toggle Long Text",
+                label: "Demo Toggle Long Text",
               },
               description: "This is a demo description",
               isError: true,
@@ -135,7 +135,7 @@ export const Gallery: Story = {
           <Switch
             {...{
               label: {
-                children: "Demo",
+                label: "Demo",
               },
               alignment: "spaced",
             }}
@@ -145,7 +145,7 @@ export const Gallery: Story = {
           <Switch
             {...{
               label: {
-                children: "Demo",
+                label: "Demo",
               },
               order: "rtl",
               alignment: "spaced",

@@ -48,7 +48,7 @@ export const Trial: Story = {
     label: {
       id: "test",
       className: "font-regular",
-      children: "Accept terms and conditions",
+      label: "Accept terms and conditions",
     },
     description: "This is a demo description",
     helperText: "This is a demo helper text",
@@ -60,7 +60,7 @@ export const Gallery: Story = {
   args: {
     checked: true,
     label: {
-      children: "",
+      label: "",
     },
   },
   render: (args) => {
@@ -125,7 +125,7 @@ export const Gallery: Story = {
             label: {
               id: "test",
               className: "font-regular",
-              children: "Custom check icon",
+              label: "Custom check icon",
             },
             checked: true,
             variant: CheckboxVariants.Outlined,
@@ -138,7 +138,7 @@ export const Gallery: Story = {
             label: {
               id: "test",
               className: "font-regular",
-              children: "Accept terms and conditions",
+              label: "Accept terms and conditions",
             },
             description: "This is a demo description",
             helperText: "This is a demo helper text",
@@ -149,7 +149,7 @@ export const Gallery: Story = {
             label: {
               id: "test",
               className: "font-regular",
-              children: "Accept terms and conditions",
+              label: "Accept terms and conditions",
             },
             description: "This is a demo description",
             helperText: "This is a demo helper text",
@@ -161,7 +161,7 @@ export const Gallery: Story = {
             label: {
               id: "test",
               className: "font-regular",
-              children: "Accept terms and conditions",
+              label: "Accept terms and conditions",
             },
             order: "rtl",
           }}
@@ -170,7 +170,7 @@ export const Gallery: Story = {
           {...{
             label: {
               id: "test",
-              children: "Demo Field 1 Description",
+              label: "Demo Field 1 Description",
             },
           }}
           alignment="spaced"

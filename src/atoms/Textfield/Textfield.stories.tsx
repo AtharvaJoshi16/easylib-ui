@@ -58,7 +58,7 @@ export const Trial: Story = {
     id: "test",
     placeholder: "Enter email",
     label: {
-      children: "Email",
+      label: "Email",
       id: "test",
     },
     type: "text",
@@ -123,13 +123,13 @@ export const Gallery: Story = {
         <Textfield {...args} classes={{ inputWrapper: "my-auto" }} />
         <Textfield
           {...args}
-          label={{ id: "test", children: "Email" }}
+          label={{ id: "test", label: "Email" }}
           description="This is a demo description"
           startIcon={<Search className="h-5 w-5 text-slate-400" />}
         />
         <Textfield
           {...args}
-          label={{ id: "test", children: "Email" }}
+          label={{ id: "test", label: "Email" }}
           description="This is a demo description"
           startIcon={<Search className="h-5 w-5 text-slate-400" />}
           helperText={<ErrorHelperText />}
@@ -138,49 +138,46 @@ export const Gallery: Story = {
         <Textfield
           {...args}
           placeholder="Enter password"
-          label={{ id: "test", children: "Password" }}
+          label={{ id: "test", label: "Password" }}
           type="password"
           description={<PasswordHelper />}
           endIcon={<EyeClosed className="h-5 w-5 text-slate-400" />}
         />
+        <Textfield label={{ id: "test", label: "Choose Resume" }} type="file" />
         <Textfield
-          label={{ id: "test", children: "Choose Resume" }}
-          type="file"
-        />
-        <Textfield
-          label={{ id: "test", children: "Choose Resume" }}
+          label={{ id: "test", label: "Choose Resume" }}
           type="file"
           color={Colors.Secondary}
         />
         <Textfield
-          label={{ id: "test", children: "Choose Resume" }}
+          label={{ id: "test", label: "Choose Resume" }}
           type="file"
           color={Colors.Success}
         />
         <Textfield
-          label={{ id: "test", children: "Choose Resume" }}
+          label={{ id: "test", label: "Choose Resume" }}
           type="file"
           color={Colors.Destructive}
         />
         <Textfield
-          label={{ id: "test", children: "Choose Resume" }}
+          label={{ id: "test", label: "Choose Resume" }}
           type="file"
           color={Colors.Warning}
         />
         <Textfield
-          label={{ id: "test", children: "Choose Resume" }}
+          label={{ id: "test", label: "Choose Resume" }}
           type="file"
           color={Colors.Gray}
         />
         <Textfield
-          label={{ id: "test", children: "Choose Resume" }}
+          label={{ id: "test", label: "Choose Resume" }}
           type="file"
           color={Colors.Dark}
         />
         <Textfield
           label={{
             id: "test",
-            children: "Choose resume",
+            label: "Choose resume",
           }}
           type="file"
           color={Colors.Light}

@@ -1,6 +1,6 @@
 import { Input } from "@/core/components/input";
-import { LabelProps } from "@radix-ui/react-label";
 import { JSX } from "react";
+import { LabelProps } from "../Label/LabelProps";
 
 export interface TextfieldProps extends React.ComponentProps<typeof Input> {
   classes?: {

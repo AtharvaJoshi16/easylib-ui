@@ -1,6 +1,8 @@
-import { Label } from "@/core/components/label";
 import { Textarea as CoreTextArea } from "@/core/components/textarea";
+import { Description } from "@/helpers/Description";
+import { HelperText } from "@/helpers/HelperText";
 import clsx from "clsx";
+import Label from "../Label/Label";
 import { TextAreaProps } from "./TextareaProps";
 export const Textarea = ({
   label,
@@ -24,16 +26,13 @@ export const Textarea = ({
         className={clsx({ "border-destructive": isError }, props?.className)}
       />
       {description && !isError && (
-        <span className={clsx("text-xs pl-1 text-gray", classes?.description)}>
-          {description}
-        </span>
+        <Description
+          className={classes?.description}
+          description={description}
+        />
       )}
       {isError && (
-        <span
-          className={clsx("text-xs pl-1 text-destructive", classes?.helperText)}
-        >
-          {helperText}
-        </span>
+        <HelperText className={classes?.helperText} helperText={helperText} />
       )}
     </div>
   );
