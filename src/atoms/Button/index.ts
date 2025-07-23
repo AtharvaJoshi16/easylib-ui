@@ -1,3 +1,3 @@
 export { Button, default } from "./Button";
-export { ButtonColors, ButtonVariants } from "./ButtonProps";
+export { ButtonColors, ButtonSizes, ButtonVariants } from "./ButtonProps";
 export type { ButtonProps } from "./ButtonProps";
