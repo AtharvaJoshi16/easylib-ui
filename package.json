@@ -1,9 +1,10 @@
 {
   "name": "@aj.dev/easylib-ui",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Atharva Joshi",
-  "license": "MIT",
-  "description": "Custom UI Library",
+  "license": "None",
+  "homepage": "https://easylibui.atharvajoshi.dev",
+  "description": "Custom UI Library developed using React, Shadcn UI, Tailwindcss and Typescript",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -57,6 +58,10 @@
     "./CheckboxGroup": {
       "import": "./dist/molecules/CheckboxGroup/index.js",
       "types": "./dist/molecules/CheckboxGroup/index.d.ts"
+    },
+    "./Alert": {
+      "import": "./dist/molecules/Alert/index.js",
+      "types": "./dist/molecules/Alert/index.d.ts"
     },
     "./Modal": {
       "import": "./dist/organisms/Modal/index.js",

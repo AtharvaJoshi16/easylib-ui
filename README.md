@@ -18,6 +18,8 @@
   - Chip
   - RadioGroup
   - CheckboxGroup
+  - Alert
+  - Modal (In progress)
 
 Developer - Atharva Joshi
 Visit: <a href="https://easylibui.atharvajoshi.dev">Easylib UI Storybook</a>

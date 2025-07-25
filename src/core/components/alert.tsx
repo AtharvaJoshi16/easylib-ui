@@ -1,21 +1,21 @@
 import * as React from "react";
 
+import { Colors } from "@/interfaces";
 import { cn } from "@/lib/utils";
-import { AlertVariants } from "@/molecules/Alert/AlertProps";
 import { AlertVariantProps, alertVariants } from "../variants/alert";
 
 export interface CoreAlertProps
   extends React.HTMLAttributes<HTMLDivElement>,
     AlertVariantProps {
-  variant?: AlertVariants;
+  color?: Colors;
 }
 
 const Alert = React.forwardRef<HTMLDivElement, CoreAlertProps>(
-  ({ className, variant, ...props }, ref) => (
+  ({ className, color, ...props }, ref) => (
     <div
       ref={ref}
       role="alert"
-      className={cn(alertVariants({ variant }), className)}
+      className={cn(alertVariants({ color }), className)}
       {...props}
     />
   )
