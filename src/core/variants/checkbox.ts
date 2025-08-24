@@ -17,6 +17,7 @@ export const checkboxVariants = cva(
         gray: "",
         dark: "",
         light: "",
+        muted: "",
       },
       size: {
         default: "h-4 w-4",

@@ -13,6 +13,7 @@ export const colors = cva(
         gray: "file:text-gray file:bg-gray/10",
         dark: "file:text-dark file:bg-dark/10",
         light: "file:text-light file:bg-light/10",
+        muted: "",
       },
     },
     defaultVariants: {

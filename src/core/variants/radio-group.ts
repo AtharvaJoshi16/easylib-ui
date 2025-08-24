@@ -17,6 +17,7 @@ export const radioGroupItemVariants = cva(
         gray: "border-gray text-gray",
         dark: "border-dark text-dark",
         light: "border-light text-light",
+        muted: "",
       },
       size: {
         default: "h-4 w-4",
@@ -90,6 +91,7 @@ export const radioIconVariants = cva("h-auto w-auto", {
       gray: "",
       dark: "",
       light: "",
+      muted: "",
     },
     size: {
       default: "p-[2px]",

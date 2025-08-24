@@ -1,3 +1,4 @@
+import { ButtonProps } from "@/atoms";
 import {
   DialogContentProps,
   DialogDescriptionProps,
@@ -19,4 +20,10 @@ export interface ModalProps extends DialogProps {
   content: React.ReactNode;
   header?: React.ReactNode;
   footer?: React.ReactNode;
+  showCloseIcon?: boolean;
+  onClose?: () => void;
+  actions?: {
+    cta1?: ButtonProps;
+    cta2?: ButtonProps;
+  };
 }

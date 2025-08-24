@@ -19,6 +19,7 @@ export const badgeVariants = cva(
         gray: "",
         dark: "",
         light: "",
+        muted: "",
       },
       size: {
         default: "px-2 py-0.5",

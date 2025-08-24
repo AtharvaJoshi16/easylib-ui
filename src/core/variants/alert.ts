@@ -14,6 +14,7 @@ export const alertVariants = cva(
         gray: "border-gray bg-gray/20 text-gray-dark",
         light: "border-light bg-light/20 text-light",
         dark: "border-dark bg-dark/20 text-dark-dark",
+        muted: "",
       },
     },
     defaultVariants: {

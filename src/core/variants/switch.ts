@@ -13,6 +13,7 @@ export const switchVariants = cva(
         gray: "data-[state=checked]:bg-gray",
         dark: "data-[state=checked]:bg-dark",
         light: "data-[state=checked]:bg-light",
+        muted: "",
       },
       size: {
         default: "h-5 w-10",

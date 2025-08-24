@@ -17,3 +17,18 @@ export type { TextAreaProps } from "./Textarea";
 
 export { default as ELLabel, Label } from "./Label";
 export type { LabelProps } from "./Label";
+
+export { default as ELSpinner, Spinner } from "./Spinner";
+export type { SpinnerProps } from "./Spinner";
+
+export { default as ELTypography, Typography } from "./Typography";
+export type {
+  BaseTypographyProps,
+  SlotProps,
+  Slots,
+  TypographyComponent,
+  TypographyVariants,
+} from "./Typography";
+
+export { default as ELSwitch, Switch } from "./Switch";
+export type { SwitchProps } from "./Switch";

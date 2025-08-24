@@ -7,4 +7,5 @@ export enum Colors {
   Gray = "gray",
   Dark = "dark",
   Light = "light",
+  Muted = "muted",
 }

@@ -19,6 +19,7 @@ export const buttonVariants = cva(
         gray: "",
         dark: "",
         light: "",
+        muted: "",
       },
       size: {
         default: "px-4 py-2",

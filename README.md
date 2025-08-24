@@ -14,12 +14,13 @@
   - Checkbox
   - Switch
   - Textarea
+  - Spinner
   - Label
   - Chip
   - RadioGroup
   - CheckboxGroup
   - Alert
-  - Modal (In progress)
+  - Modal
 
 Developer - Atharva Joshi
 Visit: <a href="https://easylibui.atharvajoshi.dev">Easylib UI Storybook</a>
