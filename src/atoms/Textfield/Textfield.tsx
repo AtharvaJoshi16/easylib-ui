@@ -1,7 +1,7 @@
-import { Input } from "@/core/components/input";
-import { Description } from "@/helpers/Description";
-import { HelperText } from "@/helpers/HelperText";
 import clsx from "clsx";
+import { Input } from "../../core/components/input";
+import { Description } from "../../helpers/Description";
+import { HelperText } from "../../helpers/HelperText";
 import Label from "../Label/Label";
 import { TextfieldProps } from "./TextfieldProps";
 

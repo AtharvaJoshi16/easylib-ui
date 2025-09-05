@@ -1,9 +1,9 @@
-import { LabelProps } from "@/atoms";
+import { LabelProps } from "../../atoms";
 import {
   CoreRadioGroupItemProps,
   CoreRadioGroupProps,
-} from "@/core/components/radio-group";
-import { Colors, Sizes } from "@/interfaces";
+} from "../../core/components/radio-group";
+import { Colors, Sizes } from "../../interfaces";
 
 export interface RadioGroupProps extends CoreRadioGroupProps {
   options: RadioGroupItemProps[];

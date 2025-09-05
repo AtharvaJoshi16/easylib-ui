@@ -1,5 +1,5 @@
-import { Input } from "@/core/components/input";
 import { JSX } from "react";
+import { Input } from "../../core/components/input";
 import { LabelProps } from "../Label/LabelProps";
 
 export interface TextfieldProps extends React.ComponentProps<typeof Input> {

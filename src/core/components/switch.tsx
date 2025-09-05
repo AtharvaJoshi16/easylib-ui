@@ -1,9 +1,9 @@
 import * as SwitchPrimitives from "@radix-ui/react-switch";
 import * as React from "react";
 
-import { Colors, Sizes } from "@/interfaces";
-import { cn } from "@/lib/utils";
 import clsx from "clsx";
+import { Colors, Sizes } from "../../interfaces";
+import { cn } from "../../lib/utils";
 import { SwitchVariantProps, switchVariants } from "../variants/switch";
 
 export interface CoreSwitchProps

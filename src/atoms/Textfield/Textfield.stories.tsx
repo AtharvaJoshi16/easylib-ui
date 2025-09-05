@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Colors } from "@/interfaces/Colors";
 import { Story } from "@storybook/blocks";
 import { Check, EyeClosed, Info, Search } from "lucide-react";
+import { Colors } from "../../interfaces/Colors";
 import { Textfield } from "./Textfield";
 const meta = {
   title: "Components/Atoms/Textfield",

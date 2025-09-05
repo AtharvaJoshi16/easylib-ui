@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { Colors } from "@/interfaces/Colors";
-import { cn } from "@/lib/utils";
+import { Colors } from "../../interfaces/Colors";
+import { cn } from "../../lib/utils";
 import { colors, InputVariantProps } from "../variants/input";
 
 export interface InputProps

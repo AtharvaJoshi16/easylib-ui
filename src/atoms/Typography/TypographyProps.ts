@@ -1,5 +1,5 @@
-import { Colors } from "@/interfaces";
 import { JSX } from "react";
+import { Colors } from "../../interfaces";
 
 export const tags: Record<string, string> = {
   h1: "h1",

@@ -1,10 +1,10 @@
-import { Button } from "@/atoms";
-import { ButtonSizes, ButtonVariants } from "@/atoms/Button/ButtonProps";
-import { Badge } from "@/core/components/badge";
-import { Sizes } from "@/interfaces";
 import clsx from "clsx";
 import { X } from "lucide-react";
 import { useState } from "react";
+import { Button } from "../../atoms";
+import { ButtonSizes, ButtonVariants } from "../../atoms/Button/ButtonProps";
+import { Badge } from "../../core/components/badge";
+import { Sizes } from "../../interfaces";
 import { ChipProps, ChipTypes } from "./ChipProps";
 
 export const Chip = ({

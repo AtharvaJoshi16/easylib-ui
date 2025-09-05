@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Colors } from "@/interfaces";
 import { Story } from "@storybook/blocks";
 import { UserLock } from "lucide-react";
+import { Colors } from "../../interfaces";
 import { Alert } from "./Alert";
 const meta = {
   title: "Components/Molecules/Alert",

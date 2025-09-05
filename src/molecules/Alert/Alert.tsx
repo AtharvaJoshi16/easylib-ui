@@ -1,11 +1,3 @@
-import { Button, ButtonVariants } from "@/atoms";
-import { ButtonSizes } from "@/atoms/Button";
-import {
-  AlertDescription,
-  AlertTitle,
-  Alert as CoreAlert,
-} from "@/core/components/alert";
-import { Colors } from "@/interfaces";
 import clsx from "clsx";
 import {
   CircleCheckBig,
@@ -17,6 +9,14 @@ import {
   X,
 } from "lucide-react";
 import { JSX } from "react";
+import { Button, ButtonVariants } from "../../atoms";
+import { ButtonSizes } from "../../atoms/Button";
+import {
+  AlertDescription,
+  AlertTitle,
+  Alert as CoreAlert,
+} from "../../core/components/alert";
+import { Colors } from "../../interfaces";
 import { AlertProps } from "./AlertProps";
 
 const AlertIcon = ({

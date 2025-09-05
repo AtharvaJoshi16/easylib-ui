@@ -15,7 +15,7 @@ export default defineConfig({
     lib: {
       entry: entries, // main entry,
       name: "build",
-      formats: ["es", "cjs"],
+      formats: ["es"],
     },
     rollupOptions: {
       external: (id) => {
@@ -25,22 +25,13 @@ export default defineConfig({
         ) {
           return true;
         }
-
-        // Exclude @core or any relative import that resolves to src/core
-        return (
-          id.startsWith("@core") ||
-          id.startsWith("@/core") ||
-          id.startsWith("./core") ||
-          id.includes("/src/core/") ||
-          id.includes("\\src\\core\\")
-        );
       },
       output: {
         preserveModules: true, // 👈 keeps folder structure
         preserveModulesRoot: "src", // 👈 start folders from /src
         exports: "named",
-        entryFileNames: "[name].js",
-        chunkFileNames: "[name].js",
+        entryFileNames: "[name].[format].js",
+        chunkFileNames: "[name].[format].js",
       },
     },
     // sourcemap: true,

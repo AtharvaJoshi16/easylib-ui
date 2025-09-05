@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ButtonVariants } from "@/atoms";
-import { Button } from "@/core/components/button";
 import { Story } from "@storybook/blocks";
 import { useState } from "react";
+import { ButtonVariants } from "../../atoms";
+import { Button } from "../../core/components/button";
 import { Modal } from "./Modal";
 const meta = {
   title: "Components/Organisms/Modal",

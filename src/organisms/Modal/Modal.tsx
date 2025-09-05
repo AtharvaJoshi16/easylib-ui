@@ -1,16 +1,16 @@
-import { ButtonVariants } from "@/atoms";
-import { ButtonSizes } from "@/atoms/Button";
-import { Button } from "@/core/components/button";
+import clsx from "clsx";
+import { X } from "lucide-react";
+import { ButtonVariants } from "../../atoms";
+import { ButtonSizes } from "../../atoms/Button";
+import { Button } from "../../core/components/button";
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTrigger,
-} from "@/core/components/dialog";
-import { Colors } from "@/interfaces";
-import clsx from "clsx";
-import { X } from "lucide-react";
+} from "../../core/components/dialog";
+import { Colors } from "../../interfaces";
 import { ModalProps } from "./ModalProps";
 
 export const Modal = ({

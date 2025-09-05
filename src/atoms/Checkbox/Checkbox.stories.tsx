@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Colors, Sizes } from "@/interfaces";
 import { Story } from "@storybook/blocks";
 import { X } from "lucide-react";
+import { Colors, Sizes } from "../../interfaces";
 import { Checkbox } from "./Checkbox";
 import { CheckboxVariants } from "./CheckboxProps";
 const meta = {

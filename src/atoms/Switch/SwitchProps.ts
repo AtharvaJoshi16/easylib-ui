@@ -1,5 +1,5 @@
-import { CoreSwitchProps } from "@/core/components/switch";
-import { Sizes } from "@/interfaces";
+import { CoreSwitchProps } from "../../core/components/switch";
+import { Sizes } from "../../interfaces";
 import { LabelProps } from "../Label/LabelProps";
 
 export interface SwitchProps extends CoreSwitchProps {

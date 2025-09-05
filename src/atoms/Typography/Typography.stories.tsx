@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Colors } from "@/interfaces";
 import { Story } from "@storybook/blocks";
+import { Colors } from "../../interfaces";
 import { Typography } from "./Typography";
 import { TypographyVariants } from "./TypographyProps";
 const meta = {

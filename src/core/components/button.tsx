@@ -1,9 +1,9 @@
 import { Slot } from "@radix-ui/react-slot";
 import * as React from "react";
 
-import { ButtonSizes } from "@/atoms/Button/ButtonProps";
-import { Colors } from "@/interfaces";
-import { cn } from "@/lib/utils";
+import { ButtonSizes } from "../../atoms/Button/ButtonProps";
+import { Colors } from "../../interfaces";
+import { cn } from "../../lib/utils";
 import { ButtonVariantProps, buttonVariants } from "../variants/button";
 
 export interface ButtonProps

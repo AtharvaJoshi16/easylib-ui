@@ -1,5 +1,5 @@
-import { CoreCheckboxProps } from "@/core/components/checkbox";
-import { Colors, Sizes } from "@/interfaces";
+import { CoreCheckboxProps } from "../../core/components/checkbox";
+import { Colors, Sizes } from "../../interfaces";
 import { LabelProps } from "../Label/LabelProps";
 
 export interface CheckboxProps extends CoreCheckboxProps {

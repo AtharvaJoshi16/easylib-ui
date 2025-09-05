@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Colors, Sizes } from "@/interfaces";
 import { Story } from "@storybook/blocks";
+import { Colors, Sizes } from "../../interfaces";
 import { RadioGroup } from "./RadioGroup";
 import { RadioGroupVariants } from "./RadioGroupProps";
 const meta = {

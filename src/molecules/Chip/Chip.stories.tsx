@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Colors, Sizes } from "@/interfaces";
 import { Story } from "@storybook/blocks";
+import { Colors, Sizes } from "../../interfaces";
 import { Chip } from "./Chip";
 import { ChipTypes, ChipVariants } from "./ChipProps";
 const meta = {

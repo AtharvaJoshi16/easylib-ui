@@ -1,7 +1,7 @@
-import { Checkbox as CoreCheckbox } from "@/core/components/checkbox";
-import { Description } from "@/helpers/Description";
-import { HelperText } from "@/helpers/HelperText";
 import clsx from "clsx";
+import { Checkbox as CoreCheckbox } from "../../core/components/checkbox";
+import { Description } from "../../helpers/Description";
+import { HelperText } from "../../helpers/HelperText";
 import Label from "../Label/Label";
 import { CheckboxProps } from "./CheckboxProps";
 

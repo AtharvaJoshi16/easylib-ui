@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Colors, Sizes } from "@/interfaces";
-import { cn } from "@/lib/utils";
-import { ChipVariants } from "@/molecules/Chip/ChipProps";
+import { Colors, Sizes } from "../../interfaces";
+import { cn } from "../../lib/utils";
+import { ChipVariants } from "../../molecules/Chip/ChipProps";
 import { badgeVariants, BadgeVariants } from "../variants/badge";
 
 export interface BadgeProps

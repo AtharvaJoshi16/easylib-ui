@@ -1,6 +1,6 @@
-import { ButtonProps as CoreButtonProps } from "@/core/components/button";
-import { Colors } from "@/interfaces";
 import React, { JSX } from "react";
+import { ButtonProps as CoreButtonProps } from "../../core/components/button";
+import { Colors } from "../../interfaces";
 
 export interface ButtonProps extends CoreButtonProps {
   children: React.ReactNode;

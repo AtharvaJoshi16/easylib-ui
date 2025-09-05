@@ -1,5 +1,5 @@
-import { BadgeProps } from "@/core/components/badge";
-import { Colors, Sizes } from "@/interfaces";
+import { BadgeProps } from "../../core/components/badge";
+import { Colors, Sizes } from "../../interfaces";
 
 export interface ChipProps extends BadgeProps {
   type?: ChipTypes;

@@ -1,7 +1,7 @@
-import { CoreAlertProps } from "@/core/components/alert";
-import { Colors } from "@/interfaces";
 import { LucideProps } from "lucide-react";
 import { JSX } from "react";
+import { CoreAlertProps } from "../../core/components/alert";
+import { Colors } from "../../interfaces";
 
 export interface AlertProps {
   slots?: {

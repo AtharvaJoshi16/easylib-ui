@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { Colors } from "@/interfaces";
-import { cn } from "@/lib/utils";
+import { Colors } from "../../interfaces";
+import { cn } from "../../lib/utils";
 import { AlertVariantProps, alertVariants } from "../variants/alert";
 
 export interface CoreAlertProps

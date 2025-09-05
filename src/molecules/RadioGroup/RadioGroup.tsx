@@ -1,11 +1,11 @@
-import { Label } from "@/atoms";
+import clsx from "clsx";
+import { Label } from "../../atoms";
 import {
   RadioGroup as CoreRadioGroup,
   RadioGroupItem as CoreRadioGroupItem,
-} from "@/core/components/radio-group";
-import { Description } from "@/helpers/Description";
-import { HelperText } from "@/helpers/HelperText";
-import clsx from "clsx";
+} from "../../core/components/radio-group";
+import { Description } from "../../helpers/Description";
+import { HelperText } from "../../helpers/HelperText";
 import { RadioGroupProps } from "./RadioGroupProps";
 export const RadioGroup = ({
   options,

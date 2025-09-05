@@ -1,6 +1,6 @@
-import { typographyVariants } from "@/core/variants/typography";
-import { Colors } from "@/interfaces";
-import { cn } from "@/lib/utils";
+import { typographyVariants } from "../../core/variants/typography";
+import { Colors } from "../../interfaces";
+import { cn } from "../../lib/utils";
 import {
   tags,
   TypographyComponent,

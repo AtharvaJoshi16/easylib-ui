@@ -1,4 +1,3 @@
-import { ButtonProps } from "@/atoms";
 import {
   DialogContentProps,
   DialogDescriptionProps,
@@ -6,6 +5,7 @@ import {
   DialogTitleProps,
   DialogTriggerProps,
 } from "@radix-ui/react-dialog";
+import { ButtonProps } from "../../atoms";
 
 export interface ModalProps extends DialogProps {
   slotProps?: {

@@ -1,4 +1,4 @@
-import { Textarea } from "@/core/components/textarea";
+import { Textarea } from "../../core/components/textarea";
 import { LabelProps } from "../Label/LabelProps";
 
 export interface TextAreaProps extends React.ComponentProps<typeof Textarea> {

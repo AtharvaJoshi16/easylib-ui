@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Colors } from "@/interfaces";
 import { Story } from "@storybook/blocks";
 import { Loader, Star } from "lucide-react";
+import { Colors } from "../../interfaces";
 import { Button } from "./Button";
 import { ButtonSizes, ButtonVariants } from "./ButtonProps";
 const meta = {

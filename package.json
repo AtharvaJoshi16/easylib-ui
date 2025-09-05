@@ -1,12 +1,12 @@
 {
   "name": "@aj.dev/easylib-ui",
-  "version": "0.1.8",
+  "version": "0.1.12",
   "author": "Atharva Joshi",
   "license": "None",
   "homepage": "https://easylibui.atharvajoshi.dev",
   "description": "Custom UI Library developed using React, Shadcn UI, Tailwindcss and Typescript",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -18,61 +18,60 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
+      "import": "./dist/index.es.js",
+      "default": "./dist/index.es.js"
     },
     "./style.css": "./dist/easylib-ui.css",
     "./Button": {
-      "import": "./dist/atoms/Button/index.js",
+      "import": "./dist/atoms/Button/index.es.js",
       "types": "./dist/atoms/Button/index.d.ts"
     },
     "./Textfield": {
-      "import": "./dist/atoms/Textfield/index.js",
+      "import": "./dist/atoms/Textfield/index.es.js",
       "types": "./dist/atoms/Textfield/index.d.ts"
     },
     "./Typography": {
-      "import": "./dist/atoms/Typography/index.js",
+      "import": "./dist/atoms/Typography/index.es.js",
       "types": "./dist/atoms/Typography/index.d.ts"
     },
     "./Checkbox": {
-      "import": "./dist/atoms/Checkbox/index.js",
+      "import": "./dist/atoms/Checkbox/index.es.js",
       "types": "./dist/atoms/Checkbox/index.d.ts"
     },
     "./Textarea": {
-      "import": "./dist/atoms/Textarea/index.js",
+      "import": "./dist/atoms/Textarea/index.es.js",
       "types": "./dist/atoms/Textarea/index.d.ts"
     },
     "./Switch": {
-      "import": "./dist/atoms/Switch/index.js",
+      "import": "./dist/atoms/Switch/index.es.js",
       "types": "./dist/atoms/Switch/index.d.ts"
     },
     "./Label": {
-      "import": "./dist/atoms/Label/index.js",
+      "import": "./dist/atoms/Label/index.es.js",
       "types": "./dist/atoms/Label/index.d.ts"
     },
     "./Chip": {
-      "import": "./dist/molecules/Chip/index.js",
+      "import": "./dist/molecules/Chip/index.es.js",
       "types": "./dist/molecules/Chip/index.d.ts"
     },
     "./RadioGroup": {
-      "import": "./dist/molecules/RadioGroup/index.js",
+      "import": "./dist/molecules/RadioGroup/index.es.js",
       "types": "./dist/molecules/RadioGroup/index.d.ts"
     },
     "./CheckboxGroup": {
-      "import": "./dist/molecules/CheckboxGroup/index.js",
+      "import": "./dist/molecules/CheckboxGroup/index.es.js",
       "types": "./dist/molecules/CheckboxGroup/index.d.ts"
     },
     "./Spinner": {
-      "import": "./dist/atoms/Spinner/index.js",
+      "import": "./dist/atoms/Spinner/index.es.js",
       "types": "./dist/atoms/Spinner/index.d.ts"
     },
     "./Alert": {
-      "import": "./dist/molecules/Alert/index.js",
+      "import": "./dist/molecules/Alert/index.es.js",
       "types": "./dist/molecules/Alert/index.d.ts"
     },
     "./Modal": {
-      "import": "./dist/organisms/Modal/index.js",
+      "import": "./dist/organisms/Modal/index.es.js",
       "types": "./dist/organisms/Modal/index.d.ts"
     }
   },
