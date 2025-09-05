@@ -4,7 +4,7 @@ export default {
   content: [
     "./core/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@aj.dev/easylib-ui/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/easylib-ui/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
