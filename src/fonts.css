@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Medium";
+  src: url("./assets/fonts/WorkSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Semibold";
+  src: url("./assets/fonts/WorkSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Bold";
+  src: url("./assets/fonts/WorkSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Extra Bold";
+  src: url("./assets/fonts/WorkSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Light";
+  src: url("./assets/fonts/WorkSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Extra Light";
+  src: url("./assets/fonts/WorkSans-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Thin";
+  src: url("./assets/fonts/WorkSans-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Italic";
+  src: url("./assets/fonts/WorkSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Medium Italic";
+  src: url("./assets/fonts/WorkSans-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Light Italic";
+  src: url("./assets/fonts/WorkSans-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Extra Light Italic";
+  src: url("./assets/fonts/WorkSans-ExtraLightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Thin Italic";
+  src: url("./assets/fonts/WorkSans-ThinItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans SemiBold Italic";
+  src: url("./assets/fonts/WorkSans-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Bold Italic";
+  src: url("./assets/fonts/WorkSans-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans Extra Bold Italic";
+  src: url("./assets/fonts/WorkSans-ExtraBoldItalic.ttf") format("truetype");
+}

@@ -8,6 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "worksans-x-light": ["Work Sans Extra Light", "sans-serif"],
+        "worksans-light": ["Work Sans Light", "sans-serif"],
+        "worksans-thin": ["Work Sans Thin", "sans-serif"],
+        "worksans-medium": ["Work Sans Medium", "sans-serif"],
+        worksans: ["Work Sans", "sans-serif"],
+        "worksans-semibold": ["Work Sans Semibold", "sans-serif"],
+        "worksans-bold": ["Work Sans Bold", "sans-serif"],
+        "worksans-x-bold": ["Work Sans Extra Bold", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 3px)",
