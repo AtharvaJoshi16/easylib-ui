@@ -7,6 +7,7 @@
   - ShadCN + RadixUI
   - Storybook as Design System
   - Atomic Design
+  - Hygen for boilerplate creation
 
 - Components covered so far
   - Button
