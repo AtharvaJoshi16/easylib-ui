@@ -2,4 +2,5 @@
 to: src/<%= type %>/<%= name %>/index.ts
 ---
 
-export * from "./<%= name %>";
+export { <%= name %>, default } from "./<%= name %>";
+export type { <%= name %>Props } from "./<%= name %>Props";
