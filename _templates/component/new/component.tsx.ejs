@@ -1,0 +1,11 @@
+---
+to: src/<%= type %>/<%= name %>/<%= name %>.tsx
+---
+
+import { <%= name %>Props } from "./<%= name %>Props"; 
+
+export const <%= name %>= ({ ...props }: <%= name %>Props ) => { 
+   return (
+   <div><%= name %> Component</div>
+   ); 
+};
