@@ -1,7 +1,9 @@
 import {
+  AccordionContentProps,
   AccordionItemProps,
   AccordionMultipleProps,
   AccordionSingleProps,
+  AccordionTriggerProps,
 } from "@radix-ui/react-accordion";
 import { JSX } from "react";
 
@@ -20,7 +22,13 @@ export enum AccordionTriggerVariants {
 export type AccordionCommonProps = {
   items: AccordionItem[];
   variant?: AccordionVariants;
+  rotateIcon?: boolean;
   triggerVariant?: AccordionTriggerVariants;
+  slots?: {
+    trigger?: AccordionTriggerProps;
+    item?: AccordionItemProps;
+    content?: AccordionContentProps;
+  };
 };
 
 export type AccordionProps =
@@ -35,5 +43,6 @@ export interface AccordionItem {
   content: React.ReactNode;
   trigger?: React.ReactNode;
   expandIcon?: JSX.Element;
+  disabled?: boolean;
   props?: AccordionItemProps;
 }

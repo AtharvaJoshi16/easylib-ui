@@ -1,7 +1,8 @@
 import { Button, ButtonVariants } from "@/atoms";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArrowBigDown, ArrowDown } from "lucide-react";
+import { ArrowBigDown, ArrowDown, ChevronDown } from "lucide-react";
 import { Accordion } from "./Accordion";
+import { AccordionVariants } from "./AccordionProps";
 
 const meta: Meta<typeof Accordion> = {
   title: "Components/Molecules/Accordion",
@@ -14,6 +15,9 @@ const meta: Meta<typeof Accordion> = {
     triggerVariant: {
       control: "select",
       options: ["default", "cta"],
+    },
+    rotateIcon: {
+      control: "boolean",
     },
   },
 };
@@ -31,6 +35,7 @@ export const Default: Story = {
         content: "Item 1 Test Content",
         expandIcon: <ArrowDown />,
         trigger: <Button variant={ButtonVariants.Text}>Collapse/Expand</Button>,
+        disabled: true,
       },
       {
         id: "item-2",
@@ -50,11 +55,34 @@ export const Default: Story = {
 };
 
 export const Gallery: Story = {
-  args: {},
+  args: {
+    type: "multiple",
+    items: [
+      {
+        id: "item-1",
+        title: "Item 1",
+        content: "Item 1 Test Content",
+        expandIcon: <ChevronDown />,
+      },
+    ],
+  },
   render: (args) => {
     return (
-      <div>
+      <div className="flex flex-col gap-2">
         <Accordion {...args} />
+        <Accordion {...args} variant={AccordionVariants.Contained} />
+        <Accordion {...args} variant={AccordionVariants.Ghost} />
+        <Accordion
+          {...args}
+          variant={AccordionVariants.Outlined}
+          items={[
+            {
+              id: "item-1",
+              title: "Item 1",
+              content: "Item 1 Test Content",
+            },
+          ]}
+        />
       </div>
     );
   },

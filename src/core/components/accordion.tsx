@@ -1,5 +1,4 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDown } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -42,6 +41,20 @@ const AccordionItem = React.forwardRef<
 ));
 AccordionItem.displayName = "AccordionItem";
 
+const DivTrigger = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ children, ...props }, ref) => (
+  <div
+    ref={ref}
+    tabIndex={0} // make focusable
+    role="button" // preserve button semantics
+    {...props}
+  >
+    {children}
+  </div>
+));
+
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   AccordionTriggerProps
@@ -54,12 +67,12 @@ const AccordionTrigger = React.forwardRef<
         ref={ref}
         className={cn(accordionTriggerVariants({ variant }), className)}
         {...props}
+        asChild
       >
-        {children}
-        {!isCta &&
-          (expandIcon ?? (
-            <ChevronDown className="text-muted-foreground transition-transform duration-200" />
-          ))}
+        <DivTrigger>
+          {children}
+          {!isCta && expandIcon}
+        </DivTrigger>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
