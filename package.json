@@ -73,6 +73,14 @@
     "./Modal": {
       "import": "./dist/organisms/Modal/index.es.js",
       "types": "./dist/organisms/Modal/index.d.ts"
+    },
+    "./Accordion": {
+      "import": "./dist/molecules/Accordion/index.es.js",
+      "types": "./dist/molecules/Accordion/index.d.ts"
+    },
+    "./Slider": {
+      "import": "./dist/atoms/Slider/index.es.js",
+      "types": "./dist/atoms/Slider/index.d.ts"
     }
   },
   "type": "module",
@@ -139,6 +147,7 @@
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-radio-group": "^1.3.7",
+    "@radix-ui/react-slider": "^1.3.6",
     "@radix-ui/react-switch": "^1.2.5",
     "fast-glob": "^3.3.3"
   }

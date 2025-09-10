@@ -13,3 +13,15 @@ export type { CheckboxGroupProps } from "./CheckboxGroup";
 
 export { Alert, default as ELAlert } from "./Alert";
 export type { AlertProps } from "./Alert";
+
+export {
+  Accordion,
+  AccordionTriggerVariants,
+  AccordionVariants,
+  default as ELAccordion,
+} from "./Accordion";
+export type {
+  AccordionCommonProps,
+  AccordionItem,
+  AccordionProps,
+} from "./Accordion";

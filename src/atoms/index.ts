@@ -32,3 +32,11 @@ export type {
 
 export { default as ELSwitch, Switch } from "./Switch";
 export type { SwitchProps } from "./Switch";
+
+export {
+  default as ELSlider,
+  Slider,
+  SliderTypes,
+  SliderVariants,
+} from "./Slider";
+export type { SliderProps } from "./Slider";

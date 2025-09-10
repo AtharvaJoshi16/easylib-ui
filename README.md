@@ -22,6 +22,9 @@
   - CheckboxGroup
   - Alert
   - Modal
+  - Slider
+  - Accordion
+  - Typography
 
 Developer - Atharva Joshi
 Visit: <a href="https://easylibui.atharvajoshi.dev">Easylib UI Storybook</a>

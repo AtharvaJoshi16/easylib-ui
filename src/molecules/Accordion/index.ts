@@ -1,2 +1,7 @@
 export { Accordion, default } from "./Accordion";
-export type { AccordionProps } from "./AccordionProps";
+export { AccordionTriggerVariants, AccordionVariants } from "./AccordionProps";
+export type {
+  AccordionCommonProps,
+  AccordionItem,
+  AccordionProps,
+} from "./AccordionProps";
