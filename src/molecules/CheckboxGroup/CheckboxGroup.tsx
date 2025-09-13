@@ -1,5 +1,5 @@
 import { CheckedState } from "@radix-ui/react-checkbox";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Checkbox, CheckboxProps, CheckboxVariants, Label } from "../../atoms";
 import { Description } from "../../helpers/Description";
 import { HelperText } from "../../helpers/HelperText";

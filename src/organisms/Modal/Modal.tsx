@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { X } from "lucide-react";
 import { ButtonVariants } from "../../atoms";
 import { ButtonSizes } from "../../atoms/Button";

@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Textarea as CoreTextArea } from "../../core/components/textarea";
 import { Description } from "../../helpers/Description";
 import { HelperText } from "../../helpers/HelperText";

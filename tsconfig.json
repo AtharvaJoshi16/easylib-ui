@@ -5,6 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["jest", "node", "@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -14,7 +15,6 @@
     "noEmit": true,
     "declaration": true,
     "jsx": "react-jsx",
-    "typeRoots": ["./dist/index.d.ts"],
     "rootDir": "src",
     "outDir": "dist",
     /* Linting */
@@ -27,5 +27,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "theme.ts"]
+  "include": ["src", "theme.ts", "**/*.test.tsx", "**/*.test.ts"]
 }

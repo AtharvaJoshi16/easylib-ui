@@ -1,7 +1,7 @@
 import { Slider as CoreSlider } from "@/core/components/slider";
 import { Description } from "@/helpers/Description";
 import { HelperText } from "@/helpers/HelperText";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import Label from "../Label";
 import { SliderProps } from "./SliderProps";
 

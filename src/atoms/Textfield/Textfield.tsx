@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Input } from "../../core/components/input";
 import { Description } from "../../helpers/Description";
 import { HelperText } from "../../helpers/HelperText";

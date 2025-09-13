@@ -2,7 +2,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { Check } from "lucide-react";
 import * as React from "react";
 
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { CheckboxVariants } from "../../atoms/Checkbox/CheckboxProps";
 import { Colors, Sizes } from "../../interfaces";
 import { cn } from "../../lib/utils";
