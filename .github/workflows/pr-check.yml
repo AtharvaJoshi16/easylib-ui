@@ -1,8 +1,6 @@
 name: Easylib CI/CD Pipeline
 
 on:
-  push:
-    branches: ["**"]
   pull_request:
     branches: ["**"]
 
@@ -44,7 +42,7 @@ jobs:
         run: npm run build
 
       - name: Build Storybook
-        run: npm run build-Storybook
+        run: npm run build-storybook
 
   test:
     name: Unit Test Execution
@@ -59,6 +57,9 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run Tests
         run: npm run test
