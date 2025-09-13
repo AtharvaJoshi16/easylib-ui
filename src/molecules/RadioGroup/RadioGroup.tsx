@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Label } from "../../atoms";
 import {
   RadioGroup as CoreRadioGroup,

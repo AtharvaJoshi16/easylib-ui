@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es6",
+    "strict": true
+  },
+  "include": [
+    "src/atoms/**/*",
+    "src/molecules/**/*",
+    "src/organisms/**/*"
+  ]
+}

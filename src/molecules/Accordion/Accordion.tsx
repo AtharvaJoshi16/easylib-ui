@@ -4,7 +4,7 @@ import {
   AccordionItem as CoreAccordionItem,
   AccordionTrigger as CoreAccordionTrigger,
 } from "@/core/components/accordion";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import {
   AccordionProps,
   AccordionTriggerVariants,

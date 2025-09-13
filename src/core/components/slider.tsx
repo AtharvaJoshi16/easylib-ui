@@ -4,7 +4,7 @@ import * as React from "react";
 import { SliderTypes, SliderVariants } from "@/atoms/Slider/SliderProps";
 import { Colors, Sizes } from "@/interfaces";
 import { cn } from "@/lib/utils";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import {
   rangeVariants,
   SliderVariantProps,

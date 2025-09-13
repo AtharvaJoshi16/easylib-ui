@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Loader2 } from "lucide-react";
 import { Button as CoreButton } from "../../core/components/button";
 import { Colors } from "../../interfaces";
@@ -31,7 +31,10 @@ export const Button = ({
       disabled={props.disabled || loading}
       size={size}
     >
-      {loading && (loader ?? <Loader2 className="animate-spin" />)}
+      {loading &&
+        (loader ?? (
+          <Loader2 data-testid="default-loader" className="animate-spin" />
+        ))}
       {!loading && startIcon}
       {children}
       {!loading && endIcon}

@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Switch as CoreSwitch } from "../../core/components/switch";
 import { Description } from "../../helpers/Description";
 import { HelperText } from "../../helpers/HelperText";

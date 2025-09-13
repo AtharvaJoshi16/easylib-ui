@@ -31,7 +31,7 @@ export const trackVariants = cva(
 );
 
 export const thumbVariants = cva(
-  "block border bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none",
+  "cursor-pointer block border bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none",
   {
     variants: {
       color: {
