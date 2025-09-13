@@ -16,7 +16,7 @@ describe("Button", () => {
 
   it("renders default loader when loading prop is provided", () => {
     render(<Button loading>Click me</Button>);
-    expect(screen.getByTestId("default-loader")).toBeInTheDocument();
+    expect(screen.getByTestId("custom-loader")).toBeInTheDocument();
   });
 
   it("renders startIcon and endIcon when not loading", () => {
