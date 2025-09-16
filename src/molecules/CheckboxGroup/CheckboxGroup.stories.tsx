@@ -48,45 +48,52 @@ export const Trial: Story = {
     },
     options: [
       {
-        id: "1",
-        value: "1",
-        label: {
-          label: "Option 1",
-        },
-        checked: true,
-        onCheckedChange: (checked) => {
-          console.log(!!checked);
-        },
-      },
-      {
-        id: "2",
-        value: "2",
-        label: {
-          label: "Option 2",
-        },
-      },
-      {
-        id: "3",
-        value: "3",
-        label: {
-          label: "Option 3",
-        },
-        checked: true,
-      },
-      {
-        id: "4",
-        value: "4",
-        label: {
-          label: "Option 4",
-        },
-      },
-      {
-        id: "5",
-        value: "5",
-        label: {
-          label: "Option 5",
-        },
-        disabled: true,
+        label: { label: "Parent" },
+        id: "parent",
+        value: "parent-1",
+        options: [
+          {
+            id: "1",
+            value: "1",
+            label: {
+              label: "Option 1",
+            },
+            checked: true,
+            onCheckedChange: (checked) => {
+              console.log(!!checked);
+            },
+          },
+          {
+            id: "2",
+            value: "2",
+            label: {
+              label: "Option 2",
+            },
+          },
+          {
+            id: "3",
+            value: "3",
+            label: {
+              label: "Option 3",
+            },
+            checked: true,
+          },
+          {
+            id: "4",
+            value: "4",
+            label: {
+              label: "Option 4",
+            },
+          },
+          {
+            id: "5",
+            value: "5",
+            label: {
+              label: "Option 5",
+            },
+            disabled: true,
+          },
+        ],
       },
     ],
   },
