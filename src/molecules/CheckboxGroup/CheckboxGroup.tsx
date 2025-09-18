@@ -1,6 +1,6 @@
 import { CheckedState } from "@radix-ui/react-checkbox";
 import { clsx } from "clsx";
-import { Checkbox, CheckboxProps, CheckboxVariants, Label } from "../../atoms";
+import { Checkbox, CheckboxVariants, Label } from "../../atoms";
 import { Description } from "../../helpers/Description";
 import { HelperText } from "../../helpers/HelperText";
 import { Sizes } from "../../interfaces";
@@ -22,7 +22,7 @@ export const CheckboxGroup = ({
   onChange,
 }: CheckboxGroupProps) => {
   const handleCheckedChange = (
-    option: CheckboxProps,
+    option: CheckboxOptions,
     selected: CheckedState
   ) => {
     let opts = [...options];
@@ -30,10 +30,16 @@ export const CheckboxGroup = ({
     opts[target].checked = !!selected;
     onChange?.(opts);
     option?.onCheckedChange?.(selected);
+    if (!!option?.options?.length) {
+      option.options.forEach((child) => {
+        child.checked = !!selected;
+        option?.onCheckedChange?.(selected);
+      });
+    }
   };
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLButtonElement>,
-    option: CheckboxProps
+    option: CheckboxOptions
   ) => {
     if (e?.key === "Space") {
       let opts = [...options];
@@ -54,6 +60,13 @@ export const CheckboxGroup = ({
       >
         <Checkbox
           {...option}
+          classes={{
+            wrapper: clsx(
+              { "mb-2": !!option.options?.length },
+              option.className
+            ),
+            ...option?.classes,
+          }}
           key={option.id}
           color={color}
           variant={variant}
