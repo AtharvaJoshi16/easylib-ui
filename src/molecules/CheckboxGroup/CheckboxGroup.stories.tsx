@@ -95,6 +95,46 @@ export const Trial: Story = {
           },
         ],
       },
+      {
+        label: { label: "Parent 2" },
+        id: "parent-2",
+        value: "parent-2",
+        options: [
+          {
+            id: "1x",
+            value: "1x",
+            label: {
+              label: "Option 1",
+            },
+            checked: true,
+            onCheckedChange: (checked) => {
+              console.log(!!checked);
+            },
+          },
+          {
+            id: "2x",
+            value: "2x",
+            label: {
+              label: "Option 2",
+            },
+          },
+          {
+            id: "3x",
+            value: "3x",
+            label: {
+              label: "Option 3",
+            },
+            checked: true,
+          },
+          {
+            id: "4x",
+            value: "4x",
+            label: {
+              label: "Option 4",
+            },
+          },
+        ],
+      },
     ],
   },
   render: (args) => {

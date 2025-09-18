@@ -4,7 +4,7 @@ import { Checkbox, CheckboxProps, CheckboxVariants, Label } from "../../atoms";
 import { Description } from "../../helpers/Description";
 import { HelperText } from "../../helpers/HelperText";
 import { Sizes } from "../../interfaces";
-import { CheckboxGroupProps } from "./CheckboxGroupProps";
+import { CheckboxGroupProps, CheckboxOptions } from "./CheckboxGroupProps";
 
 export const CheckboxGroup = ({
   variant = CheckboxVariants.Contained,
@@ -43,6 +43,30 @@ export const CheckboxGroup = ({
       option?.onKeyDown?.(e);
     }
   };
+
+  const renderOptions: any = (options: CheckboxOptions[]) => {
+    return options?.map((option) => (
+      <div
+        className={clsx("flex flex-col", {
+          "mx-4 my-1": !option?.options?.length,
+        })}
+        key={option.id}
+      >
+        <Checkbox
+          {...option}
+          key={option.id}
+          color={color}
+          variant={variant}
+          size={size}
+          order={order}
+          alignment={alignment}
+          onCheckedChange={(state) => handleCheckedChange(option, state)}
+          onKeyDown={(e) => handleKeyDown(e, option)}
+        />
+        {option.options && renderOptions(option.options)}
+      </div>
+    ));
+  };
   return (
     <div className={clsx("flex flex-col gap-2", classes?.wrapper)}>
       <Label {...label} />
@@ -62,21 +86,7 @@ export const CheckboxGroup = ({
           classes?.optionsWrapper
         )}
       >
-        {options?.map((option) => {
-          return (
-            <Checkbox
-              {...option}
-              key={option.id}
-              color={color}
-              variant={variant}
-              size={size}
-              order={order}
-              alignment={alignment}
-              onCheckedChange={(state) => handleCheckedChange(option, state)}
-              onKeyDown={(e) => handleKeyDown(e, option)}
-            />
-          );
-        })}
+        {renderOptions(options)}
       </div>
       {description && !isError && (
         <Description
