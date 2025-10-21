@@ -25,17 +25,19 @@ export const CheckboxGroup = ({
     option: CheckboxOptions,
     selected: CheckedState
   ) => {
-    let opts = [...options];
-    let target = opts.findIndex((opt) => opt.id === option.id);
-    opts[target].checked = !!selected;
-    onChange?.(opts);
-    option?.onCheckedChange?.(selected);
-    if (!!option?.options?.length) {
-      option.options.forEach((child) => {
-        child.checked = !!selected;
-        option?.onCheckedChange?.(selected);
-      });
-    }
+    return options?.map((opt) => {
+      if (opt.id === option.id) {
+        const copy = { ...opt };
+        copy.checked = !!selected;
+        copy?.onCheckedChange?.(!!selected);
+        if (!!copy.options) {
+          copy.options = copy.options.map((nestedOpt) =>
+            handleCheckedChange(nestedOpt, !!selected)
+          );
+        }
+      } else {
+      }
+    });
   };
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLButtonElement>,
@@ -51,34 +53,31 @@ export const CheckboxGroup = ({
   };
 
   const renderOptions: any = (options: CheckboxOptions[]) => {
-    return options?.map((option) => (
-      <div
-        className={clsx("flex flex-col", {
-          "mx-4 my-1": !option?.options?.length,
-        })}
-        key={option.id}
-      >
-        <Checkbox
-          {...option}
-          classes={{
-            wrapper: clsx(
-              { "mb-2": !!option.options?.length },
-              option.className
-            ),
-            ...option?.classes,
-          }}
-          key={option.id}
-          color={color}
-          variant={variant}
-          size={size}
-          order={order}
-          alignment={alignment}
-          onCheckedChange={(state) => handleCheckedChange(option, state)}
-          onKeyDown={(e) => handleKeyDown(e, option)}
-        />
-        {option.options && renderOptions(option.options)}
-      </div>
-    ));
+    return options?.map((option) => {
+      return (
+        <div className={"flex flex-col mx-4 my-1"} key={option.id}>
+          <Checkbox
+            {...option}
+            classes={{
+              wrapper: clsx(
+                { "mb-2": !!option.options?.length },
+                option.className
+              ),
+              ...option?.classes,
+            }}
+            key={option.id}
+            color={color}
+            variant={variant}
+            size={size}
+            order={order}
+            alignment={alignment}
+            onCheckedChange={(state) => handleCheckedChange(option, state)}
+            onKeyDown={(e) => handleKeyDown(e, option)}
+          />
+          {option.options && renderOptions(option.options)}
+        </div>
+      );
+    });
   };
   return (
     <div className={clsx("flex flex-col gap-2", classes?.wrapper)}>

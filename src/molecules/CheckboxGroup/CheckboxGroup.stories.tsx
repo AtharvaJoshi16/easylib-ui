@@ -58,6 +58,15 @@ export const Trial: Story = {
             label: {
               label: "Option 1",
             },
+            options: [
+              {
+                id: "nested-1",
+                value: "nested-1",
+                label: {
+                  label: "Nested Option 1",
+                },
+              },
+            ],
             checked: true,
             onCheckedChange: (checked) => {
               console.log(!!checked);
@@ -139,7 +148,7 @@ export const Trial: Story = {
   },
   render: (args) => {
     const [options, setOptions] = useState(args.options);
-    console.log(options);
+
     return (
       <div className="flex flex-col gap-4">
         <CheckboxGroup {...args} onChange={(opts) => setOptions(opts)} />
