@@ -67,7 +67,7 @@ export const Trial: Story = {
                 },
               },
             ],
-            checked: true,
+
             onCheckedChange: (checked) => {
               console.log(!!checked);
             },
@@ -85,7 +85,6 @@ export const Trial: Story = {
             label: {
               label: "Option 3",
             },
-            checked: true,
           },
           {
             id: "4",
@@ -115,7 +114,7 @@ export const Trial: Story = {
             label: {
               label: "Option 1",
             },
-            checked: true,
+
             onCheckedChange: (checked) => {
               console.log(!!checked);
             },
@@ -133,7 +132,6 @@ export const Trial: Story = {
             label: {
               label: "Option 3",
             },
-            checked: true,
           },
           {
             id: "4x",
@@ -174,7 +172,7 @@ export const Gallery: Story = {
         label: {
           label: "Option 1",
         },
-        checked: true,
+
         onCheckedChange: (checked) => {
           console.log(!!checked);
         },
@@ -192,7 +190,6 @@ export const Gallery: Story = {
         label: {
           label: "Option 3",
         },
-        checked: true,
       },
     ],
   },

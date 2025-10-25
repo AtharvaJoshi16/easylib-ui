@@ -21,23 +21,41 @@ export const CheckboxGroup = ({
   helperText,
   onChange,
 }: CheckboxGroupProps) => {
+  const updateCheckboxChildren = (option: CheckboxOptions, state: boolean) => {
+    const copy = { ...option };
+    copy.checked = state;
+    copy.onCheckedChange?.(state);
+    if (!!copy?.options?.length) {
+      copy.options = copy.options.map((opt) => {
+        if (!opt.disabled) {
+          opt.checked = state;
+          opt.onCheckedChange?.(state);
+          if (!!opt.options?.length) {
+            const updatedChildren = updateCheckboxChildren(opt, state);
+            Object.assign(opt, updatedChildren);
+          }
+        }
+        return opt;
+      });
+    } else {
+      return copy;
+    }
+  };
+
   const handleCheckedChange = (
     option: CheckboxOptions,
+    currOptions: CheckboxOptions[],
     selected: CheckedState
   ) => {
-    return options?.map((opt) => {
+    const optsCopy = [...currOptions];
+    optsCopy.map((opt) => {
       if (opt.id === option.id) {
-        const copy = { ...opt };
-        copy.checked = !!selected;
-        copy?.onCheckedChange?.(!!selected);
-        if (!!copy.options) {
-          copy.options = copy.options.map((nestedOpt) =>
-            handleCheckedChange(nestedOpt, !!selected)
-          );
-        }
-      } else {
+        const updatedOption = updateCheckboxChildren(opt, !!selected);
+        Object.assign(opt, updatedOption);
+        opt.options && handleCheckedChange(opt, opt.options, !!selected);
       }
     });
+    return optsCopy;
   };
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLButtonElement>,
@@ -71,7 +89,9 @@ export const CheckboxGroup = ({
             size={size}
             order={order}
             alignment={alignment}
-            onCheckedChange={(state) => handleCheckedChange(option, state)}
+            onCheckedChange={(state) =>
+              onChange?.(handleCheckedChange(option, options, state))
+            }
             onKeyDown={(e) => handleKeyDown(e, option)}
           />
           {option.options && renderOptions(option.options)}
