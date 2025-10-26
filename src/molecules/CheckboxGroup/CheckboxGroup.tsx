@@ -10,7 +10,7 @@ export const CheckboxGroup = ({
   variant = CheckboxVariants.Contained,
   color,
   size = Sizes.Default,
-  options,
+  options: ogOptions,
   label,
   classes,
   order = "ltr",
@@ -22,6 +22,7 @@ export const CheckboxGroup = ({
   onChange,
 }: CheckboxGroupProps) => {
   const updateCheckboxChildren = (option: CheckboxOptions, state: boolean) => {
+    console.log(option);
     const copy = { ...option };
     copy.checked = state;
     copy.onCheckedChange?.(state);
@@ -37,9 +38,8 @@ export const CheckboxGroup = ({
         }
         return opt;
       });
-    } else {
-      return copy;
     }
+    return copy;
   };
 
   const handleCheckedChange = (
@@ -57,12 +57,48 @@ export const CheckboxGroup = ({
     });
     return optsCopy;
   };
+
+  const updateFinalOptions = (
+    options: CheckboxOptions[],
+    parentId: string,
+    updatedNestedOptions: CheckboxOptions[]
+  ): CheckboxOptions[] => {
+    return options.map((opt) => {
+      if (opt.options?.find((o) => o.id === parentId)) {
+        return {
+          ...opt,
+          options: updatedNestedOptions,
+        };
+      }
+      if (!!opt.options?.length) {
+        return {
+          ...opt,
+          options: updateFinalOptions(
+            opt.options,
+            parentId,
+            updatedNestedOptions
+          ),
+        };
+      }
+      return opt;
+    });
+  };
+
+  const handleFinalCheckedChange = (
+    option: CheckboxOptions,
+    options: CheckboxOptions[],
+    state: boolean
+  ) => {
+    const finalOptions = handleCheckedChange(option, options, state);
+    onChange?.(updateFinalOptions(ogOptions, option.id!, finalOptions));
+  };
+
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLButtonElement>,
     option: CheckboxOptions
   ) => {
     if (e?.key === "Space") {
-      let opts = [...options];
+      let opts = [...ogOptions];
       let target = opts.findIndex((opt) => opt.id === option.id);
       opts[target].checked = !opts[target].checked;
       onChange?.(opts);
@@ -90,7 +126,7 @@ export const CheckboxGroup = ({
             order={order}
             alignment={alignment}
             onCheckedChange={(state) =>
-              onChange?.(handleCheckedChange(option, options, state))
+              handleFinalCheckedChange(option, options, !!state)
             }
             onKeyDown={(e) => handleKeyDown(e, option)}
           />
@@ -118,7 +154,7 @@ export const CheckboxGroup = ({
           classes?.optionsWrapper
         )}
       >
-        {renderOptions(options)}
+        {renderOptions(ogOptions)}
       </div>
       {description && !isError && (
         <Description

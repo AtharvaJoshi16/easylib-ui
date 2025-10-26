@@ -58,19 +58,6 @@ export const Trial: Story = {
             label: {
               label: "Option 1",
             },
-            options: [
-              {
-                id: "nested-1",
-                value: "nested-1",
-                label: {
-                  label: "Nested Option 1",
-                },
-              },
-            ],
-
-            onCheckedChange: (checked) => {
-              console.log(!!checked);
-            },
           },
           {
             id: "2",
@@ -84,6 +71,34 @@ export const Trial: Story = {
             value: "3",
             label: {
               label: "Option 3",
+            },
+            options: [
+              {
+                id: "nested-1",
+                value: "nested-1",
+                label: {
+                  label: "Nested Option 1",
+                },
+                options: [
+                  {
+                    id: "deep-nested-1",
+                    value: "deep-nested-1",
+                    label: {
+                      label: "Deep Nested Option 1",
+                    },
+                  },
+                  {
+                    id: "deep-nested-2",
+                    value: "deep-nested-2",
+                    label: {
+                      label: "Deep Nested Option 2",
+                    },
+                  },
+                ],
+              },
+            ],
+            onCheckedChange: (checked) => {
+              console.log(!!checked);
             },
           },
           {
@@ -149,7 +164,13 @@ export const Trial: Story = {
 
     return (
       <div className="flex flex-col gap-4">
-        <CheckboxGroup {...args} onChange={(opts) => setOptions(opts)} />
+        <CheckboxGroup
+          {...args}
+          onChange={(opts) => {
+            setOptions(opts);
+            console.log(opts);
+          }}
+        />
         <div className="flex items-center gap-2">
           Selected options:
           {options
