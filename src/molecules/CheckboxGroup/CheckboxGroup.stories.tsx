@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { Colors } from "@/interfaces";
 import { Story } from "@storybook/blocks";
 import { useState } from "react";
 import { CheckboxGroup } from "./CheckboxGroup";
@@ -40,12 +41,10 @@ export const Trial: Story = {
     label: {
       label: "Choose one or more options",
     },
+    color: Colors.Secondary,
     description: "This is a test description",
     helperText: "This is a demo text",
     isError: true,
-    classes: {
-      wrapper: "w-[50%]",
-    },
     options: [
       {
         label: { label: "Parent" },

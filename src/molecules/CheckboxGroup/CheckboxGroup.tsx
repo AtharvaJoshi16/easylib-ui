@@ -22,7 +22,6 @@ export const CheckboxGroup = ({
   onChange,
 }: CheckboxGroupProps) => {
   const updateCheckboxChildren = (option: CheckboxOptions, state: boolean) => {
-    console.log(option);
     const copy = { ...option };
     copy.checked = state;
     copy.onCheckedChange?.(state);
@@ -90,7 +89,35 @@ export const CheckboxGroup = ({
     state: boolean
   ) => {
     const finalOptions = handleCheckedChange(option, options, state);
-    onChange?.(updateFinalOptions(ogOptions, option.id!, finalOptions));
+    const updatedFinalOptions = updateFinalOptions(
+      ogOptions,
+      option.id!,
+      finalOptions
+    );
+    console.log(findParentPath(updatedFinalOptions, option.id!));
+    onChange?.(updatedFinalOptions);
+  };
+
+  const findParentPath = (
+    options: CheckboxOptions[],
+    targetId: string,
+    path: string[] = []
+  ): string[] => {
+    for (const option of options) {
+      if (option.id === targetId) {
+        return [...path, option.id!];
+      }
+      if (!!option.options?.length) {
+        const result = findParentPath(option.options, targetId, [
+          ...path,
+          option.id!,
+        ]);
+        if (result.length) {
+          return result;
+        }
+      }
+    }
+    return path;
   };
 
   const handleKeyDown = (
