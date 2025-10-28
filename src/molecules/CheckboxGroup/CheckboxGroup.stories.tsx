@@ -119,7 +119,7 @@ export const Trial: Story = {
       },
       {
         label: { label: "Parent 2" },
-        id: "parent-2",
+        id: "parent2",
         value: "parent-2",
         options: [
           {

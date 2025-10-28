@@ -3,12 +3,12 @@ import { Alignments, Orders } from "../../atoms/Checkbox/CheckboxProps";
 import { Colors, Sizes } from "../../interfaces";
 import { Orientation } from "../../interfaces/Orientations";
 
-export interface CheckboxOptions extends CheckboxProps {
-  options?: CheckboxOptions[];
+export interface CheckboxOption extends CheckboxProps {
+  options?: CheckboxOption[];
 }
 
 export interface CheckboxGroupProps {
-  options: CheckboxOptions[];
+  options: CheckboxOption[];
   label?: LabelProps;
   variant?: CheckboxVariants;
   alignment?: Alignments;
