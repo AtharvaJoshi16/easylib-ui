@@ -3,6 +3,12 @@ import { render, screen } from "@testing-library/react";
 import { Slider } from "../Slider";
 import { SliderTypes } from "../SliderProps";
 
+(global as any).ResizeObserver = class {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
 describe("Slider Component", () => {
   test("renders the label when provided", () => {
     render(

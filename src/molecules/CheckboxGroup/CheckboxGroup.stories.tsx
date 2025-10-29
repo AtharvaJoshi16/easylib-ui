@@ -4,6 +4,7 @@ import { Colors } from "@/interfaces";
 import { Story } from "@storybook/blocks";
 import { useState } from "react";
 import { CheckboxGroup } from "./CheckboxGroup";
+import { options } from "./mockData";
 const meta = {
   title: "Components/Molecules/CheckboxGroup",
   component: CheckboxGroup,
@@ -45,118 +46,7 @@ export const Trial: Story = {
     description: "This is a test description",
     helperText: "This is a demo text",
     isError: true,
-    options: [
-      {
-        label: { label: "Parent" },
-        id: "parent",
-        value: "parent-1",
-        options: [
-          {
-            id: "1",
-            value: "1",
-            label: {
-              label: "Option 1",
-            },
-          },
-          {
-            id: "2",
-            value: "2",
-            label: {
-              label: "Option 2",
-            },
-          },
-          {
-            id: "3",
-            value: "3",
-            label: {
-              label: "Option 3",
-            },
-            options: [
-              {
-                id: "nested-1",
-                value: "nested-1",
-                label: {
-                  label: "Nested Option 1",
-                },
-                options: [
-                  {
-                    id: "deep-nested-1",
-                    value: "deep-nested-1",
-                    label: {
-                      label: "Deep Nested Option 1",
-                    },
-                  },
-                  {
-                    id: "deep-nested-2",
-                    value: "deep-nested-2",
-                    label: {
-                      label: "Deep Nested Option 2",
-                    },
-                  },
-                ],
-              },
-            ],
-            onCheckedChange: (checked) => {
-              console.log(!!checked);
-            },
-          },
-          {
-            id: "4",
-            value: "4",
-            label: {
-              label: "Option 4",
-            },
-          },
-          {
-            id: "5",
-            value: "5",
-            label: {
-              label: "Option 5",
-            },
-            disabled: true,
-          },
-        ],
-      },
-      {
-        label: { label: "Parent 2" },
-        id: "parent2",
-        value: "parent-2",
-        options: [
-          {
-            id: "1x",
-            value: "1x",
-            label: {
-              label: "Option 1",
-            },
-
-            onCheckedChange: (checked) => {
-              console.log(!!checked);
-            },
-          },
-          {
-            id: "2x",
-            value: "2x",
-            label: {
-              label: "Option 2",
-            },
-          },
-          {
-            id: "3x",
-            value: "3x",
-            label: {
-              label: "Option 3",
-            },
-          },
-          {
-            id: "4x",
-            value: "4x",
-            label: {
-              label: "Option 4",
-            },
-          },
-        ],
-      },
-    ],
+    options: options,
   },
   render: (args) => {
     const [options, setOptions] = useState(args.options);

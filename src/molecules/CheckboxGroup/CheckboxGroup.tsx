@@ -5,6 +5,12 @@ import { Description } from "../../helpers/Description";
 import { HelperText } from "../../helpers/HelperText";
 import { Sizes } from "../../interfaces";
 import { CheckboxGroupProps, CheckboxOption } from "./CheckboxGroupProps";
+import {
+  backtrackParentAndUpdate,
+  findParentPath,
+  updateCheckboxChildren,
+  updateFinalOptions,
+} from "./CheckboxGroupUtils";
 
 export const CheckboxGroup = ({
   variant = CheckboxVariants.Contained,
@@ -21,35 +27,6 @@ export const CheckboxGroup = ({
   helperText,
   onChange,
 }: CheckboxGroupProps) => {
-  const updateCheckboxChildren = (option: CheckboxOption, state: boolean) => {
-    const copy = { ...option };
-    copy.checked = state;
-    copy.onCheckedChange?.(state);
-    if (!!copy?.options?.length) {
-      copy.options = copy.options.map((opt) => {
-        if (!opt.disabled) {
-          opt.checked = state;
-          opt.onCheckedChange?.(state);
-          if (!!opt.options?.length) {
-            const updatedChildren = updateCheckboxChildren(opt, state);
-            Object.assign(opt, updatedChildren);
-          }
-        }
-        return opt;
-      });
-    }
-    return copy;
-  };
-
-  const verifyAllChildrenState = (parent: CheckboxOption): boolean => {
-    if (!parent.options?.length)
-      return !!parent?.disabled || !!parent.checked || false;
-    const allChecked = parent.options.every((opt) => {
-      return verifyAllChildrenState(opt);
-    });
-    return allChecked;
-  };
-
   const handleCheckedChange = (
     option: CheckboxOption,
     currOptions: CheckboxOption[],
@@ -66,32 +43,6 @@ export const CheckboxGroup = ({
       }
     });
     return optsCopy;
-  };
-
-  const updateFinalOptions = (
-    options: CheckboxOption[],
-    parentId: string,
-    updatedNestedOptions: CheckboxOption[]
-  ): CheckboxOption[] => {
-    return options.map((opt) => {
-      if (opt.options?.find((o) => o.id === parentId)) {
-        return {
-          ...opt,
-          options: updatedNestedOptions,
-        };
-      }
-      if (!!opt.options?.length) {
-        return {
-          ...opt,
-          options: updateFinalOptions(
-            opt.options,
-            parentId,
-            updatedNestedOptions
-          ),
-        };
-      }
-      return opt;
-    });
   };
 
   const handleFinalCheckedChange = (
@@ -111,46 +62,15 @@ export const CheckboxGroup = ({
     onChange?.(updatedFinalOptions);
   };
 
-  const backtrackParentAndUpdate = (path: CheckboxOption[]) => {
-    for (let i = path.length - 1; i >= 0; i--) {
-      const parent = path[i];
-      const allChildrenChecked = verifyAllChildrenState(parent);
-      parent.checked = allChildrenChecked;
-      parent.onCheckedChange?.(allChildrenChecked);
-    }
-  };
-
-  const findParentPath = (
-    options: CheckboxOption[],
-    targetId: string,
-    path: CheckboxOption[] = []
-  ): CheckboxOption[] | null => {
-    for (const option of options) {
-      if (option.id === targetId) {
-        return [...path, option];
-      }
-      if (!!option.options?.length) {
-        const result = findParentPath(option.options, targetId, [
-          ...path,
-          option,
-        ]);
-        if (result) {
-          return result;
-        }
-      }
-    }
-    return null;
-  };
-
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLButtonElement>,
-    option: CheckboxOption
+    option: CheckboxOption,
+    options: CheckboxOption[],
+    parent: CheckboxOption,
+    state: boolean
   ) => {
     if (e?.key === "Space") {
-      let opts = [...ogOptions];
-      let target = opts.findIndex((opt) => opt.id === option.id);
-      opts[target].checked = !opts[target].checked;
-      onChange?.(opts);
+      handleFinalCheckedChange(option, options, parent, state);
       option?.onKeyDown?.(e);
     }
   };
@@ -180,7 +100,15 @@ export const CheckboxGroup = ({
             onCheckedChange={(state) =>
               handleFinalCheckedChange(option, options, parent, !!state)
             }
-            onKeyDown={(e) => handleKeyDown(e, option)}
+            onKeyDown={(e) =>
+              handleKeyDown(
+                e,
+                option,
+                options,
+                parent,
+                !option?.checked as boolean
+              )
+            }
           />
           {option.options && renderOptions(option.options, option)}
         </div>
@@ -192,7 +120,7 @@ export const CheckboxGroup = ({
       <Label {...label} />
       <div
         className={clsx(
-          "flex ml-2",
+          "flex",
           {
             "flex-row justify-between items-center":
               orientation === "horizontal",
