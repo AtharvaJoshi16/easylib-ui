@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { Colors } from "@/interfaces";
 import { Story } from "@storybook/blocks";
 import { useState } from "react";
 import { CheckboxGroup } from "./CheckboxGroup";
+import { options } from "./mockData";
 const meta = {
   title: "Components/Molecules/CheckboxGroup",
   component: CheckboxGroup,
@@ -40,62 +42,24 @@ export const Trial: Story = {
     label: {
       label: "Choose one or more options",
     },
+    color: Colors.Secondary,
     description: "This is a test description",
     helperText: "This is a demo text",
     isError: true,
-    classes: {
-      wrapper: "w-[50%]",
-    },
-    options: [
-      {
-        id: "1",
-        value: "1",
-        label: {
-          label: "Option 1",
-        },
-        checked: true,
-        onCheckedChange: (checked) => {
-          console.log(!!checked);
-        },
-      },
-      {
-        id: "2",
-        value: "2",
-        label: {
-          label: "Option 2",
-        },
-      },
-      {
-        id: "3",
-        value: "3",
-        label: {
-          label: "Option 3",
-        },
-        checked: true,
-      },
-      {
-        id: "4",
-        value: "4",
-        label: {
-          label: "Option 4",
-        },
-      },
-      {
-        id: "5",
-        value: "5",
-        label: {
-          label: "Option 5",
-        },
-        disabled: true,
-      },
-    ],
+    options: options,
   },
   render: (args) => {
     const [options, setOptions] = useState(args.options);
-    console.log(options);
+
     return (
       <div className="flex flex-col gap-4">
-        <CheckboxGroup {...args} onChange={(opts) => setOptions(opts)} />
+        <CheckboxGroup
+          {...args}
+          onChange={(opts) => {
+            setOptions(opts);
+            console.log(opts);
+          }}
+        />
         <div className="flex items-center gap-2">
           Selected options:
           {options
@@ -118,7 +82,7 @@ export const Gallery: Story = {
         label: {
           label: "Option 1",
         },
-        checked: true,
+
         onCheckedChange: (checked) => {
           console.log(!!checked);
         },
@@ -136,7 +100,6 @@ export const Gallery: Story = {
         label: {
           label: "Option 3",
         },
-        checked: true,
       },
     ],
   },

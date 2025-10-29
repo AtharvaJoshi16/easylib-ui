@@ -1,5 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { Colors } from "../../../interfaces";
 import Button from "../Button";
+import { ButtonSizes, ButtonVariants } from "../ButtonProps";
 
 describe("Button", () => {
   it("renders custom loader when loading and loader prop is provided", () => {
@@ -50,5 +52,69 @@ describe("Button", () => {
       </Button>
     );
     expect(container.firstChild).toHaveClass("justify-center");
+  });
+
+  it("renders children", () => {
+    render(<Button>Test Child</Button>);
+    expect(screen.getByText("Test Child")).toBeInTheDocument();
+  });
+
+  it("passes variant, color, and size props", () => {
+    render(
+      <Button
+        variant={ButtonVariants.Contained}
+        color={Colors.Primary}
+        size={ButtonSizes.Large}
+      >
+        Props Test
+      </Button>
+    );
+    expect(screen.getByText("Props Test")).toBeInTheDocument();
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(
+      <Button className="custom-class">Class Test</Button>
+    );
+    expect(container.firstChild).toHaveClass("custom-class");
+  });
+
+  it("disables button when loading", () => {
+    render(<Button loading>Disabled Test</Button>);
+    expect(screen.getByRole("button")).toBeDisabled();
+  });
+
+  it("disables button when disabled prop is true", () => {
+    render(<Button disabled>Disabled Test</Button>);
+    expect(screen.getByRole("button")).toBeDisabled();
+  });
+
+  it("calls onClick when not disabled or loading", () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Click Me</Button>);
+    fireEvent.click(screen.getByRole("button"));
+    expect(handleClick).toHaveBeenCalled();
+  });
+
+  it("does not call onClick when disabled", () => {
+    const handleClick = jest.fn();
+    render(
+      <Button disabled onClick={handleClick}>
+        Disabled Click
+      </Button>
+    );
+    fireEvent.click(screen.getByRole("button"));
+    expect(handleClick).not.toHaveBeenCalled();
+  });
+
+  it("does not call onClick when loading", () => {
+    const handleClick = jest.fn();
+    render(
+      <Button loading onClick={handleClick}>
+        Loading Click
+      </Button>
+    );
+    fireEvent.click(screen.getByRole("button"));
+    expect(handleClick).not.toHaveBeenCalled();
   });
 });

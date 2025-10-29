@@ -1,10 +1,10 @@
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import * as React from "react";
 
-import { SliderTypes, SliderVariants } from "@/atoms/Slider/SliderProps";
-import { Colors, Sizes } from "@/interfaces";
-import { cn } from "@/lib/utils";
 import { clsx } from "clsx";
+import { SliderTypes, SliderVariants } from "../../atoms/Slider/SliderProps";
+import { Colors, Sizes } from "../../interfaces";
+import { cn } from "../../lib/utils";
 import {
   rangeVariants,
   SliderVariantProps,
