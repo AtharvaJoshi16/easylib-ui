@@ -27,4 +27,4 @@
   - Typography
 
 Developer - Atharva Joshi
-Visit: <a href="https://easylibui.atharvajoshi.dev">Easylib UI Storybook</a>
+Visit: <a href="https://easylib-ui.atharvajoshi.online">Easylib UI Storybook</a>
