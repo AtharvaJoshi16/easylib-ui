@@ -1,5 +1,4 @@
-name: Easylib CI/CD Pipeline
-
+name: Easylib CI/CD
 on:
   pull_request:
     branches: ["**"]

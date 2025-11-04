@@ -1,9 +1,9 @@
 {
   "name": "easylib-ui",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "author": "Atharva Joshi",
   "license": "None",
-  "homepage": "https://easylibui.atharvajoshi.dev",
+  "homepage": "https://easylib-ui.atharvajoshi.online",
   "description": "Custom UI Library developed using React, Shadcn UI, Tailwindcss and Typescript",
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",

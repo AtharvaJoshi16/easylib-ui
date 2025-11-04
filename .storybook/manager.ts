@@ -3,7 +3,7 @@ import { create } from "@storybook/theming";
 export default create({
   base: "light",
   brandTitle: "Easylib UI",
-  brandUrl: "https://easylibui.atharvajoshi.dev",
+  brandUrl: "https://easylib-ui.atharvajoshi.online",
   brandImage: "/logo.png",
   brandTarget: "_self",
 });
